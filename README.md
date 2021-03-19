@@ -8,5 +8,6 @@
 
 ```shell
 cd botch-frontend/
+yarn install
 yarn start
 ```
