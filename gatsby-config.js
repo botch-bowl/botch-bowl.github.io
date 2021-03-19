@@ -1,17 +1,18 @@
 module.exports = {
   siteMetadata: {
-    title: `Botch Bowl`,
-    author: `@setuini`
+    title: 'Botch Bowl',
+    author: '@setuini'
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-image`,
-    `gatsby-plugin-root-import`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-plugin-gatsby-cloud`,
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-image',
+    'gatsby-plugin-root-import',
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-gatsby-cloud',
+    '@chakra-ui/gatsby-plugin',
     {
-      resolve: `gatsby-plugin-sass`,
+      resolve: 'gatsby-plugin-sass',
       options: {
         sassOptions: {
           includePaths: ['./src/styles']
@@ -27,22 +28,22 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
+        name: 'images',
         path: `${__dirname}/src/assets/images`
       }
     },
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `Botch Bowl`,
-        short_name: `Botch`,
-        start_url: `/`,
-        background_color: `#131313`,
-        theme_color: `#131313`,
-        display: `minimal-ui`,
-        icon: `src/assets/images/gatsby-icon.png` // This path is relative to the root of the site.
+        name: 'Botch Bowl',
+        short_name: 'Botch',
+        start_url: '/',
+        background_color: '#131313',
+        theme_color: '#131313',
+        display: 'minimal-ui',
+        icon: 'src/assets/images/gatsby-icon.png' // This path is relative to the root of the site.
       }
     },
     {
@@ -54,6 +55,6 @@ module.exports = {
         // Any eslint-webpack-plugin options below
       }
     }
-    // `gatsby-plugin-offline`,
+    // 'gatsby-plugin-offline',
   ]
 };
