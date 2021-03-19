@@ -1,0 +1,32 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  // Alias for gatsby root import
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [["src", "./src"]],
+        "extensions": [".js", ".jsx"]
+      }
+    }
+  },
+  "rules": {
+    // Allow jsx in js files
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    // Allow prop spreading
+    "react/jsx-props-no-spreading": [0, {}],
+    // Turn of to use prettier
+    "object-curly-newline": [0, {}],
+
+    "comma-dangle": [
+      1,
+      {
+        "arrays": "never",
+        "objects": "never",
+        "imports": "never",
+        "exports": "never",
+        "functions": "never"
+      }
+    ]
+  }
+}

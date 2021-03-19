@@ -1,0 +1,15 @@
+@use 'variables' as *;
+
+.header {
+  height: 64px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba($color-primary, 0.7);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+
+.brand {
+  height: 24px;
+}
