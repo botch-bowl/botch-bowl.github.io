@@ -1,0 +1,31 @@
+@use 'variables' as *;
+
+.menu {
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: $color-brand;
+}
+
+.header {
+  height: 64px;
+  width: 100%;
+}
+
+.brand {
+  height: 24px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.closeButton {
+  padding: 8px;
+  cursor: pointer;
+}

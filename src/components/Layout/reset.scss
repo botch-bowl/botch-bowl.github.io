@@ -1,5 +1,7 @@
 @use 'variables' as *;
-
+main {
+  margin-top: 88px;
+}
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -20,7 +22,7 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
-  background-color: $color-primary;
+  background-color: $color-primary !important;
   min-height: 42000px;
 }
 article,

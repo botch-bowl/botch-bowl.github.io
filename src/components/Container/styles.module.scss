@@ -1,0 +1,46 @@
+@use 'mixins' as mix;
+@use 'variables' as *;
+@use 'sass:map';
+
+.container {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+  width: 100%;
+
+  @include mix.breakpoint('sm') {
+    max-width: map.get($container-max-widths, 'sm');
+  }
+
+  @include mix.breakpoint('md') {
+    max-width: map.get($container-max-widths, 'md');
+  }
+
+  @include mix.breakpoint('lg') {
+    max-width: map.get($container-max-widths, 'lg');
+  }
+
+  @include mix.breakpoint('xl') {
+    max-width: map.get($container-max-widths, 'xl');
+  }
+}
+
+.cOpenRight {
+  padding-left: 16px;
+
+  @include mix.breakpoint('sm') {
+    margin-left: calc((100vw - #{map.get($container-max-widths, 'sm')}) / 2);
+  }
+
+  @include mix.breakpoint('md') {
+    margin-left: calc((100vw - #{map.get($container-max-widths, 'md')}) / 2);
+  }
+
+  @include mix.breakpoint('lg') {
+    margin-left: calc((100vw - #{map.get($container-max-widths, 'lg')}) / 2);
+  }
+
+  @include mix.breakpoint('xl') {
+    margin-left: calc((100vw - #{map.get($container-max-widths, 'xl')}) / 2);
+  }
+}

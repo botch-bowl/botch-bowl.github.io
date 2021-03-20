@@ -20,6 +20,13 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-plugin-anchor-links',
+      options: {
+        offset: -100,
+        duration: 2400
+      }
+    },
+    {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
