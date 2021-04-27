@@ -42,15 +42,18 @@ const Footer = () => (
             className={cIconLinkMail}
             initial={{ rotate: 0 }}
             whileHover={{ rotate: -16 }}
+            aria-label="mail"
           >
             <Mail className={cIcon} alt="E-Mail Icon" />
           </motion.a>
           <motion.a
             href="https://www.instagram.com/botchbowl/"
             target="_blank"
+            rel="noreferrer"
             className={cIconLinkInstagram}
             initial={{ rotate: 0 }}
             whileHover={{ rotate: 16 }}
+            aria-label="instagram"
           >
             <Instagram className={cIcon} alt="Instagram Logo" />
           </motion.a>

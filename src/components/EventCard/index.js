@@ -2,7 +2,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { Box, Heading, Text } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
-import ArrowIcon from 'src/assets/images/arrow-right.svg';
+import ArrowIcon from 'src/assets/images/arrow-right-2.svg';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Link } from 'gatsby';
 import cc from 'classcat';

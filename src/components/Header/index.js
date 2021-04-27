@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <header className={header}>
       <Container className={container}>
-        <Link to="/">
+        <Link to="/" aria-label="home">
           <div className={brand}>
             <Brand />
           </div>

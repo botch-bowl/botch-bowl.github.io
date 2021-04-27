@@ -45,7 +45,7 @@ const theme = extendTheme({
         },
         addon: {
           bg: '#E88661 !important',
-          color: '#fff',
+          color: '#fff'
         }
       },
       variants: {
@@ -57,7 +57,7 @@ const theme = extendTheme({
           },
           addon: {
             bg: '#E88661 !important',
-            color: '#fff',
+            color: '#fff'
           }
         }
       }

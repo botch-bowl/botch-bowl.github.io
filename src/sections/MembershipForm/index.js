@@ -20,9 +20,7 @@ const schema = yup.object().shape({
   city: yup.string().required(required),
   phone: yup.string().required(required),
   mail: yup.string().required(required),
-  instagramUser: yup.string(),
-
-  age: yup.number().positive().integer().required()
+  instagramUser: yup.string()
 });
 
 const MembershipForm = () => {
@@ -30,9 +28,7 @@ const MembershipForm = () => {
     resolver: yupResolver(schema)
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
-  };
+  const onSubmit = () => {};
 
   return (
     <Section>
