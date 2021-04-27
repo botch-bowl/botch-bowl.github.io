@@ -1,0 +1,37 @@
+@use "variables" as *;
+@use "mixins" as mix;
+
+.cTable {
+  margin-top: 32px;
+}
+
+.cTableRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 48px;
+}
+
+.cTableItem {
+
+}
+
+.cTableLine {
+  width: 100%;
+
+  path {
+    stroke: rgba($color-brand, 0.3);
+  }
+}
+
+.cButtonWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+
+  @include mix.breakpoint('md') {
+    justify-content: flex-start;
+  }
+}

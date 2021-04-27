@@ -1,15 +1,32 @@
 @use 'variables' as *;
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
   height: 64px;
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgba($color-primary, 0.7);
-  backdrop-filter: saturate(180%) blur(20px);
+  width: 100%;
+  background-color: rgba($color-primary, 0.96);
+  z-index: 1020;
 }
 
 .brand {
   height: 24px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.hamburger {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.burgerIcon {
+  width: 22px;
+  height: 16px;
 }
