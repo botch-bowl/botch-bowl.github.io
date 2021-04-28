@@ -18,7 +18,7 @@ const propTypes = {
 
 const IndexPage = ({ data }) => (
   <Layout>
-    <Seo title="Home" />
+    <Seo title="Startseite" />
 
     <Atf />
 

@@ -1,4 +1,17 @@
 @use 'variables' as *;
+
+@font-face {
+  font-family: "Minion Pro";
+  src: url("../../assets/fonts/MinionPro-Regular.woff");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Minion Pro";
+  src: url("../../assets/fonts/MinionPro-Semibold.woff");
+  font-weight: bold;
+}
+
 main {
   margin-top: 88px;
 }
@@ -23,7 +36,7 @@ body {
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
   background-color: $color-primary !important;
-  min-height: 42000px;
+  font-family: "Minion Pro", "Montserrat", georgia, serif;
 }
 article,
 aside,

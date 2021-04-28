@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Botch Bowl',
+    title: 'Botch. Bowl',
     author: '@setuini'
   },
   plugins: [
@@ -50,8 +50,27 @@ module.exports = {
         background_color: '#131313',
         theme_color: '#131313',
         display: 'minimal-ui',
-        icon: 'src/assets/images/gatsby-icon.png' // This path is relative to the root of the site.
+        icon: 'src/assets/images/favicon.svg' // This path is relative to the root of the site.
       }
+    },
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: 'Montserrat',
+              variants: ['400', '600'],
+              fontDisplay: 'swap',
+              strategy: 'selfHosted',
+            },
+          ],
+        },
+        formats: ['woff2', 'woff'],
+        useMinify: true,
+        usePreload: true,
+        usePreconnect: true,
+      },
     },
     {
       resolve: 'gatsby-plugin-eslint',
