@@ -1,3 +1,4 @@
+@use "variables" as *;
 @use "mixins" as mix;
 
 .cRow {
@@ -33,4 +34,12 @@
   @include mix.breakpoint('md') {
     max-width: 70%;
   }
+}
+
+.cLink {
+  color: $color-brand;
+}
+
+.cSection {
+  margin-top: 40px;
 }

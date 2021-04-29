@@ -1,16 +1,19 @@
 import { extendTheme } from '@chakra-ui/react';
 
 const theme = extendTheme({
+  colors: {
+    orange: {
+      500: '#E88661'
+    }
+  },
+  shadows: {
+    outline: 'rgba(232, 134, 97, 0.6) 0px 0px 0px 3px'
+  },
   styles: {
     global: {
       html: {
         fontSize: '16px'
       }
-    }
-  },
-  theme: {
-    shadows: {
-      outline: '2px solid red'
     }
   },
   components: {
@@ -31,8 +34,16 @@ const theme = extendTheme({
           field: {
             borderColor: '#E88661 !important',
             border: '2px solid',
-            bg: 'rgba(255, 255, 255, 0.4)'
+            bg: 'rgba(255, 255, 255, 0.4)',
+            borderRadius: '12px',
           }
+        }
+      }
+    },
+    Checkbox: {
+      variants: {
+        brand: {
+          bg: '#E88661 !important'
         }
       }
     },
@@ -41,7 +52,10 @@ const theme = extendTheme({
         field: {
           borderColor: '#E88661',
           border: '2px solid',
-          bg: 'rgba(255, 255, 255, 0.4)'
+          bg: 'rgba(255, 255, 255, 0.4)',
+          _placeholder: {
+            color: '#B0B0B0'
+          }
         },
         addon: {
           bg: '#E88661 !important',
@@ -53,7 +67,8 @@ const theme = extendTheme({
           field: {
             borderColor: '#E88661 !important',
             border: '2px solid',
-            bg: 'rgba(255, 255, 255, 0.4)'
+            bg: 'rgba(255, 255, 255, 0.4)',
+            borderRadius: '12px',
           },
           addon: {
             bg: '#E88661 !important',
@@ -65,7 +80,7 @@ const theme = extendTheme({
     FormLabel: {
       variants: {
         brand: {
-          color: '#E88661 !important',
+          color: '#131313 !important',
           marginBottom: '4px',
           marginTop: '8px'
         }
@@ -84,9 +99,6 @@ const theme = extendTheme({
         _hover: {
           bg: '#D16F4A'
         },
-        _focus: {
-          boxShadow: 'rgba(232, 134, 97, 0.6) 0px 0px 0px 3px'
-        }
       }
     }
   }
