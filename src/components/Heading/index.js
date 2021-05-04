@@ -10,7 +10,8 @@ const propTypes = {
   pre: PropTypes.string,
   post: PropTypes.string,
   size: PropTypes.string,
-  isLarge: PropTypes.bool
+  isLarge: PropTypes.bool,
+  as: PropTypes.string
 };
 
 const defaultProps = {
@@ -18,10 +19,11 @@ const defaultProps = {
   pre: undefined,
   post: undefined,
   size: '2xl',
-  isLarge: false
+  isLarge: false,
+  as: 'h2',
 };
 
-const BotchHeading = ({ children, pre, post, className, size, isLarge }) => {
+const BotchHeading = ({ children, pre, post, className, size, isLarge, as }) => {
   const headingClasses = cc({
     [cHeading]: true,
     [cHeadingLarge]: isLarge,
@@ -31,7 +33,7 @@ const BotchHeading = ({ children, pre, post, className, size, isLarge }) => {
   return (
     <div className={cWrapper}>
       {!!pre && <Text className={cPre}>{pre}</Text>}
-      <Heading className={headingClasses} size={size}>
+      <Heading className={headingClasses} size={size} as={as}>
         {children.substring(0, children.length - 1)}
         <span className={cLastChar}>
           {children.substring(children.length - 1, children.length)}

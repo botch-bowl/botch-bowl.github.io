@@ -1,0 +1,19 @@
+@use 'variables' as *;
+
+.cSection {
+  padding-bottom: 88px;
+}
+
+.cLink {
+  color: $color-brand;
+  margin: 8px 0;
+  display: inline-block;
+}
+
+.cSubHeading {
+  font-size: 1.8rem !important;
+}
+
+.cSubSubHeading {
+  font-size: 1.2rem !important;
+}

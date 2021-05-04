@@ -1,0 +1,15 @@
+@use 'variables' as *;
+
+.cSection {
+  padding-bottom: 88px;
+}
+.cLink {
+  color: $color-brand;
+  display: block;
+  margin-top: 8px;
+}
+
+.cQr {
+  width: 120px;
+  margin-top: 16px;
+}
