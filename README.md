@@ -14,11 +14,8 @@ yarn start
 
 **TODO's**
 
-- Mitgliedsformular
 - Menu
 - 404
-- Impressum
-- Datenschutz
 - CMS anbindung
 - Spenden Progress Bar
 - Shopify (Cart, Product Page, Product Section, Shop Page)
