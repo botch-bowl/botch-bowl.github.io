@@ -6,20 +6,14 @@ import Heading from 'src/components/Heading';
 import { Text } from '@chakra-ui/react';
 import { StaticImage } from 'gatsby-plugin-image';
 import Seo from 'src/components/Seo';
-import {
-  cLink,
-  cQr,
-  cSection,
-} from './imprint.module.scss';
+import { cLink, cQr, cSection } from './imprint.module.scss';
 
 const ImprintPage = () => (
   <Layout>
-    <Seo title="Impressum" />
+    <Seo title="Impressum" noindex />
     <Section className={cSection}>
       <Container>
-        <Heading>
-          Impressum
-        </Heading>
+        <Heading>Impressum</Heading>
         <Text>
           <strong>Botch Bowl Rollsportverein</strong>
           <br />
@@ -27,15 +21,18 @@ const ImprintPage = () => (
           <br />
           5710 Kaprun
         </Text>
-        <a href="mail-to:hello@botch-bowl.com" className={cLink}>hello@botch-bowl.com</a>
-        <a href="tel:00436769128609" className={cLink}>+43 676 9128609</a>
+        <a href="mail-to:hello@botch-bowl.com" className={cLink}>
+          hello@botch-bowl.com
+        </a>
+        <br />
+        <a href="tel:00436769128609" className={cLink}>
+          +43 676 9128609
+        </a>
       </Container>
     </Section>
-    <Section className={cSection}>
+    <Section className={cSection} id="bankverbindung">
       <Container>
-        <Heading>
-          Bankverbindung
-        </Heading>
+        <Heading>Bankverbindung</Heading>
         <Text>
           <strong>Kontoinhaber: </strong>
           Botch Bowl Rollsportverein
@@ -54,9 +51,7 @@ const ImprintPage = () => (
     </Section>
     <Section className={cSection}>
       <Container>
-        <Heading>
-          Inhalte
-        </Heading>
+        <Heading>Inhalte</Heading>
         <Text>
           <strong>Für den Inhalt verantwortlich: </strong>
           Botch Bowl Rollsportverein
@@ -74,13 +69,11 @@ const ImprintPage = () => (
     </Section>
     <Section className={cSection}>
       <Container>
-        <Heading>
-          Fotos & Videos
-        </Heading>
+        <Heading>Fotos & Videos</Heading>
         <Text>
-          Alle Fotos und Videos, welche auf dieser Website verwendet werden,
-          sind sofern nicht anders angegeben, Eigentum vom Verein Botch Bowl
-          und dürfen ohne unsere Zustimmung nicht verwendet werden.
+          Alle Fotos und Videos, welche auf dieser Website verwendet werden, sind sofern nicht
+          anders angegeben, Eigentum vom Verein Botch Bowl und dürfen ohne unsere Zustimmung nicht
+          verwendet werden.
         </Text>
       </Container>
     </Section>

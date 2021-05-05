@@ -20,7 +20,7 @@ const defaultProps = {
   post: undefined,
   size: '2xl',
   isLarge: false,
-  as: 'h2',
+  as: 'h2'
 };
 
 const BotchHeading = ({ children, pre, post, className, size, isLarge, as }) => {

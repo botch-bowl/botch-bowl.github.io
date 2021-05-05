@@ -35,7 +35,7 @@ const theme = extendTheme({
             borderColor: '#E88661 !important',
             border: '2px solid',
             bg: 'rgba(255, 255, 255, 0.4)',
-            borderRadius: '12px',
+            borderRadius: '12px'
           }
         }
       }
@@ -68,12 +68,30 @@ const theme = extendTheme({
             borderColor: '#E88661 !important',
             border: '2px solid',
             bg: 'rgba(255, 255, 255, 0.4)',
-            borderRadius: '12px',
+            borderRadius: '12px'
           },
           addon: {
             bg: '#E88661 !important',
             color: '#fff'
           }
+        }
+      }
+    },
+    Textarea: {
+      baseStyle: {
+        borderColor: '#E88661',
+        border: '2px solid',
+        bg: 'rgba(255, 255, 255, 0.4)',
+        _placeholder: {
+          color: '#B0B0B0'
+        }
+      },
+      variants: {
+        brand: {
+          borderColor: '#E88661 !important',
+          border: '2px solid',
+          bg: 'rgba(255, 255, 255, 0.4)',
+          borderRadius: '12px'
         }
       }
     },
@@ -98,7 +116,7 @@ const theme = extendTheme({
         padding: '24px 32px !important',
         _hover: {
           bg: '#D16F4A'
-        },
+        }
       }
     }
   }

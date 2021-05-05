@@ -5,7 +5,13 @@ import { motion } from 'framer-motion';
 import ArrowIcon from 'src/assets/images/scroll-indicator.svg';
 import Slider from 'react-slick';
 import cc from 'classcat';
-import { buttonContainer, arrowPrev, arrowPrevDisabled, arrowNextDisabled, arrowNext } from './styles.module.scss';
+import {
+  buttonContainer,
+  arrowPrev,
+  arrowPrevDisabled,
+  arrowNextDisabled,
+  arrowNext
+} from './styles.module.scss';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -69,18 +75,14 @@ const MySlider = ({ children }) => {
           {children}
         </Slider>
       </Container>
-      { !(isPrevDisabled && isNextDisabled) && (
+      {!(isPrevDisabled && isNextDisabled) && (
         <Container className={buttonContainer}>
           <motion.div initial={{ rotate: 90 }} whileHover={{ rotate: 74 }} onClick={prev}>
             <div>
               <ArrowIcon className={prevButtonClasses} />
             </div>
           </motion.div>
-          <motion.div
-            initial={{ rotate: -90 }}
-            whileHover={{ rotate: -74 }}
-            onClick={next}
-          >
+          <motion.div initial={{ rotate: -90 }} whileHover={{ rotate: -74 }} onClick={next}>
             <ArrowIcon className={nextButtonClasses} />
           </motion.div>
         </Container>

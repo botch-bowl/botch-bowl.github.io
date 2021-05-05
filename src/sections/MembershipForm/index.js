@@ -1,11 +1,25 @@
 import * as React from 'react';
 import Section from 'src/components/Section';
 import Container from 'src/components/Container';
-import { Heading, Text, FormControl, FormLabel, FormHelperText, Input, InputGroup, InputLeftAddon, Select, Checkbox, Button } from '@chakra-ui/react';
+import Heading from 'src/components/Heading';
+import {
+  Text,
+  FormControl,
+  FormLabel,
+  FormHelperText,
+  Input,
+  InputGroup,
+  InputLeftAddon,
+  Select,
+  Checkbox,
+  Button,
+  Textarea
+} from '@chakra-ui/react';
 import { Link } from 'gatsby';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import emailjs from 'emailjs-com';
 import { cRow, cCol, cColMd4, cColMd8, cLink, cSection } from './styles.module.scss';
 
 const required = 'Dieses Feld ist ein Pflichtfeld.';
@@ -14,7 +28,10 @@ const birthdateRegex = /^([0-2][0-9]|(3)[0-1])(\.)(((0)[0-9])|((1)[0-2]))(\.)\d{
 const schema = yup.object().shape({
   firstName: yup.string().required(required).min(1).max(50),
   lastName: yup.string().required(required).min(1).max(50),
-  birthdate: yup.string().required(required).matches(birthdateRegex, 'Ungültiges Format - DD.MM.YYYY'),
+  birthdate: yup
+    .string()
+    .required(required)
+    .matches(birthdateRegex, 'Ungültiges Format - DD.MM.YYYY'),
   gender: yup.string().required(required),
   address: yup.string().required(required),
   zip: yup.string().required(required),
@@ -22,16 +39,22 @@ const schema = yup.object().shape({
   phone: yup.string().required(required),
   mail: yup.string().required(required),
   instagramUser: yup.string(),
-  parentFirstName: yup.string().required(required).min(1).max(50),
-  parentLastName: yup.string().required(required).min(1).max(50),
-  parentPhone: yup.string().required(required),
+  shirtSize: yup.string(),
+  note: yup.string(),
+  parentFirstName: yup.string(),
+  parentLastName: yup.string(),
+  parentPhone: yup.string(),
   privacyPolicy: yup.bool().oneOf([true], required),
   newsletter: yup.bool(),
   imageUse: yup.bool()
 });
 
 const MembershipForm = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors }
+  } = useForm({
     resolver: yupResolver(schema)
   });
 
@@ -65,7 +88,7 @@ const MembershipForm = () => {
         setPrice('50 €');
       } else if (age < 10) {
         setYoungerThen16(true);
-        setPrice('kostenlos');
+        setPrice('0 €');
       } else {
         setYoungerThen16(true);
         setPrice('30 €');
@@ -75,9 +98,42 @@ const MembershipForm = () => {
     }
   };
 
+  const sendMail = (data) => {
+    const now = new Date();
+    const options = { year: 'numeric', month: 'numeric', day: 'numeric' };
+    const date = now.toLocaleDateString('de-DE', options);
+
+    const gdoc = `=SPLIT("${data.firstName}|${data.lastName}|${data.birthdate}|${data.gender}|
+    ${data.address}|${data.zip}|${data.city}|${data.phone}|${data.mail}|${data.instagramUser}|
+    ${data.shirtSize}|${data.note}|${data.parentFirstName}|${data.parentLastName}|
+    ${data.parentPhone}|${data.privacyPolicy}|${data.newsletter}|${data.imageUse}|${price}|
+    ${date}"; "|")`;
+
+    console.log(gdoc);
+
+    const params = {
+      firstname: data.firstName,
+      lastname: data.lastName,
+      docsString: gdoc,
+    };
+
+    emailjs.send(
+      'service_peak',
+      'template_membership_form',
+      params,
+      'user_3o0WGgMZIZNLSk0FtvYR1'
+    )
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+  };
+
   const onSubmit = (e) => {
     console.log('submit');
     console.log(e);
+    sendMail(e);
   };
 
   return (
@@ -106,7 +162,12 @@ const MembershipForm = () => {
               <div className={cCol}>
                 <FormControl id="birthdate">
                   <FormLabel variant="brand">Geburtsdatum *</FormLabel>
-                  <Input variant="brand" placeholder="DD.MM.YYYY" {...register('birthdate')} onChange={(e) => handleAgeChange(e)} />
+                  <Input
+                    variant="brand"
+                    placeholder="DD.MM.YYYY"
+                    {...register('birthdate')}
+                    onChange={(e) => handleAgeChange(e)}
+                  />
                   <FormHelperText>{errors.birthdate?.message}</FormHelperText>
                 </FormControl>
               </div>
@@ -128,7 +189,11 @@ const MembershipForm = () => {
               <div className={cCol}>
                 <FormControl id="address">
                   <FormLabel variant="brand">Adresse *</FormLabel>
-                  <Input variant="brand" placeholder="Straße und Hausnummer" {...register('address')} />
+                  <Input
+                    variant="brand"
+                    placeholder="Straße und Hausnummer"
+                    {...register('address')}
+                  />
                   <FormHelperText>{errors.address?.message}</FormHelperText>
                 </FormControl>
               </div>
@@ -162,7 +227,11 @@ const MembershipForm = () => {
               <div className={cCol}>
                 <FormControl id="mail">
                   <FormLabel variant="brand">E-Mail *</FormLabel>
-                  <Input variant="brand" placeholder="example@botch-bowl.com" {...register('mail')} />
+                  <Input
+                    variant="brand"
+                    placeholder="example@botch-bowl.com"
+                    {...register('mail')}
+                  />
                   <FormHelperText>{errors.mail?.message}</FormHelperText>
                 </FormControl>
               </div>
@@ -176,6 +245,29 @@ const MembershipForm = () => {
                     <Input {...register('instagramUser')} />
                   </InputGroup>
                   <FormHelperText>{errors.instagramUser?.message}</FormHelperText>
+                </FormControl>
+              </div>
+            </div>
+            <div className={cRow}>
+              <div className={cCol}>
+                <FormControl id="shirtSize">
+                  <FormLabel variant="brand">Gewünschte T-Shirt Größe</FormLabel>
+                  <Select variant="brand" placeholder="T-Shirt Größe" {...register('shirtSize')}>
+                    <option value="s">Small</option>
+                    <option value="m">Medium</option>
+                    <option value="l">Large</option>
+                    <option value="xl">X-Large</option>
+                  </Select>
+                  <FormHelperText>{errors.shirtSize?.message}</FormHelperText>
+                </FormControl>
+              </div>
+            </div>
+            <div className={cRow}>
+              <div className={cCol}>
+                <FormControl id="note">
+                  <FormLabel variant="brand">Anmerkungen</FormLabel>
+                  <Textarea variant="brand" {...register('note')} />
+                  <FormHelperText>{errors.note?.message}</FormHelperText>
                 </FormControl>
               </div>
             </div>
@@ -204,7 +296,11 @@ const MembershipForm = () => {
                 <div className={cCol}>
                   <FormControl id="phone">
                     <FormLabel variant="brand">Telefonnummer *</FormLabel>
-                    <Input variant="brand" placeholder="+43 666 00000000" {...register('parentPhone')} />
+                    <Input
+                      variant="brand"
+                      placeholder="+43 666 00000000"
+                      {...register('parentPhone')}
+                    />
                     <FormHelperText>{errors.parentPhone?.message}</FormHelperText>
                   </FormControl>
                 </div>
@@ -214,19 +310,28 @@ const MembershipForm = () => {
 
           <div className={cSection}>
             <Heading>Jahresmitgliedsbeitrag</Heading>
-            { !!price && (
-              <Heading>
-                { price }
-              </Heading>
-            )}
-
             <Text>
-              Der Jahresmitgliedsbeitrag ist bei Vereinseintritt innerhalb von 14 Tagen und bei
+              Der Jahresmitgliedsbeitrag
+              {!!price && (
+                <>
+                  {' '}
+                  von
+                  <strong>
+                    {` ${price} `}
+                  </strong>
+                </>
+              )}
+              {' '}
+              ist bei Vereinseintritt innerhalb von 14 Tagen und bei
               laufenden Mitgliedschaften bis zum 01. April des Jahres zu zahlen.
               <br />
               <br />
               Der Mitgliedsbeitrag wird fristgerecht mittels
-              <Link className={cLink} to="/konto/"> Banküberweisung </Link>
+              <a className={cLink} href="/impressum#bankverbindung" target="_blank">
+                {' '}
+                Banküberweisung
+                {' '}
+              </a>
               oder per Barzahlung bezahlt.
               <br />
               <br />
@@ -242,9 +347,17 @@ const MembershipForm = () => {
                   <FormLabel variant="brand">Datenschutz *</FormLabel>
                   <Checkbox colorScheme="orange" variant="brand" {...register('privacyPolicy')}>
                     Hiermit akzeptiere ich die
-                    <Link className={cLink} to="/datenschutz/"> Datenschutzerklärung </Link>
+                    <Link className={cLink} to="/datenschutz/">
+                      {' '}
+                      Datenschutzerklärung
+                      {' '}
+                    </Link>
                     und die
-                    <Link className={cLink} to="/statuten/"> Statuten </Link>
+                    <Link className={cLink} to="/statuten/">
+                      {' '}
+                      Statuten
+                      {' '}
+                    </Link>
                     des Botch Bowl Rollsportvereins.
                   </Checkbox>
                   <FormHelperText>{errors.privacyPolicy?.message}</FormHelperText>
@@ -268,16 +381,15 @@ const MembershipForm = () => {
                 <FormControl id="instagramUser">
                   <FormLabel variant="brand">Nutzung von Foto- & Videoaufnahmen</FormLabel>
                   <Checkbox colorScheme="orange" variant="brand" {...register('imageUse')}>
-                    Hiermit erkläre ich mich damit einverstanden, dass während der Sportausübung
-                    und Zusammenkünften/Vereinsfesten Foto- bzw. Videoaufnahmen von mir angefertig
-                    und veröffentlichkeit werden dürfen.
+                    Hiermit erkläre ich mich damit einverstanden, dass während der Sportausübung und
+                    Zusammenkünften/Vereinsfesten Foto- bzw. Videoaufnahmen von mir angefertig und
+                    veröffentlichkeit werden dürfen.
                   </Checkbox>
                   <FormHelperText>{errors.imageUse?.message}</FormHelperText>
                 </FormControl>
               </div>
             </div>
           </div>
-
           <div className={cSection}>
             <Button type="submit" variant="brand">
               Absenden

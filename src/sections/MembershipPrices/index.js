@@ -12,9 +12,7 @@ const MembershipPrices = () => (
         <Text>bis 10 Jahre</Text>
       </div>
       <div>
-        <Text>
-          kostenlos (ohne T-Shirt)
-        </Text>
+        <Text>kostenlos (ohne T-Shirt)</Text>
       </div>
     </div>
     <TableLine className={cTableLine} />
@@ -23,9 +21,7 @@ const MembershipPrices = () => (
         <Text>10 bis 16 Jahre</Text>
       </div>
       <div>
-        <Text>
-          30€
-        </Text>
+        <Text>30€</Text>
       </div>
     </div>
     <TableLine className={cTableLine} />
@@ -34,9 +30,7 @@ const MembershipPrices = () => (
         <Text>über 16 Jahre</Text>
       </div>
       <div>
-        <Text>
-          50€
-        </Text>
+        <Text>50€</Text>
       </div>
     </div>
     <TableLine className={cTableLine} />

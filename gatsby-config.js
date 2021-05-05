@@ -62,15 +62,15 @@ module.exports = {
               family: 'Montserrat',
               variants: ['400', '600'],
               fontDisplay: 'swap',
-              strategy: 'selfHosted',
-            },
-          ],
+              strategy: 'selfHosted'
+            }
+          ]
         },
         formats: ['woff2', 'woff'],
         useMinify: true,
         usePreload: true,
-        usePreconnect: true,
-      },
+        usePreconnect: true
+      }
     },
     {
       resolve: 'gatsby-plugin-eslint',

@@ -19,11 +19,7 @@ const EventsSlider = ({ data }) => (
     </Container>
     <Slider>
       <div>
-        <EventCard
-          title="Summer Opening"
-          date="TBA"
-          image={data.file.childImageSharp}
-        />
+        <EventCard title="Summer Opening" date="TBA" image={data.file.childImageSharp} />
       </div>
     </Slider>
   </Section>

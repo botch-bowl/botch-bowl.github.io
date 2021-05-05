@@ -55,9 +55,7 @@ const IndexPage = ({ data }) => (
     </Section>
     <Section>
       <Container>
-        <Heading pre="Jahresmitgliedschaften">
-          Mitglied werden.
-        </Heading>
+        <Heading pre="Jahresmitgliedschaften">Mitglied werden.</Heading>
         <Text>
           <strong>Werde Botch Vereinsmitglied und unterstütze den Weiterbau.</strong>
           <br />

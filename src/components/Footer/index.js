@@ -33,9 +33,7 @@ const Footer = () => (
         </div>
         <div className={cMenu}>
           <Link to="/impressum/" className={cLinkImpressum}>
-            <Text className={cLinkText}>
-              Impressum
-            </Text>
+            <Text className={cLinkText}>Impressum</Text>
           </Link>
           <motion.a
             href="mailto:hello@botch-bowl.com"
@@ -58,9 +56,7 @@ const Footer = () => (
             <Instagram className={cIcon} alt="Instagram Logo" />
           </motion.a>
           <Link to="/datenschutz/" className={cLinkDatenschutz}>
-            <Text className={cLinkText}>
-              Datenschutz
-            </Text>
+            <Text className={cLinkText}>Datenschutz</Text>
           </Link>
         </div>
       </Container>
