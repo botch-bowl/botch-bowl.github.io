@@ -14,8 +14,8 @@ yarn start
 
 **TODO's**
 
-- Menu
+- Mitgliedschaft Danke Seite
+- Spenden
 - 404
 - CMS anbindung
-- Spenden Progress Bar
 - Shopify (Cart, Product Page, Product Section, Shop Page)
