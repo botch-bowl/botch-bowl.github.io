@@ -1,0 +1,20 @@
+@use 'variables' as *;
+
+.cCard {
+  border-radius: 12px;
+  background-color: $color-brand;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 310px;
+  margin-right: 32px;
+}
+
+.cHeading {
+  color: $color-primary;
+  font-family: $font-primary !important;
+  font-weight: 700;
+  font-size: 1.75rem;
+  max-width: 10ch !important;
+}

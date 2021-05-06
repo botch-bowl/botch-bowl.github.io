@@ -66,7 +66,7 @@ const IndexPage = ({ data }) => (
           <br />
           Außerdem bekommst du ein Botch T-Shirt als kleines Dankeschön.
         </Text>
-        <MembershipPrices />
+        <MembershipPrices withCTA />
       </Container>
     </Section>
   </Layout>

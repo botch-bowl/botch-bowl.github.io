@@ -3,8 +3,26 @@ import PropTypes from 'prop-types';
 import Brand from 'src/assets/images/botch.svg';
 import Close from 'src/assets/images/close.svg';
 import Container from 'src/components/Container';
+import { Link } from 'gatsby';
 import { motion } from 'framer-motion';
-import { menu, header, container, brand, closeButton } from './styles.module.scss';
+import { isBrowser } from 'react-device-detect';
+import Instagram from 'src/assets/images/instagram-dark.svg';
+import Mail from 'src/assets/images/mail-dark.svg';
+import {
+  menu,
+  header,
+  container,
+  brand,
+  closeButton,
+  cBody,
+  cNav,
+  cLink,
+  cLinkActive,
+  cIconLinkMail,
+  cIconLinkInstagram,
+  cIcon,
+  cIconWrapper,
+} from './styles.module.scss';
 
 const propTypes = {
   isOpen: PropTypes.bool,
@@ -61,6 +79,38 @@ const Menu = ({ isOpen, toggleMenu }) => {
               <Close />
             </motion.div>
           </motion.div>
+        </Container>
+      </div>
+      <div className={cBody}>
+        <Container className={cNav}>
+          <Link to="/" className={cLink} activeClassName={cLinkActive}>
+            Startseite
+          </Link>
+          <Link to="/mitgliedschaft/" className={cLink} activeClassName={cLinkActive}>
+            Mitgliedschaft
+          </Link>
+          <div className={cIconWrapper}>
+            <motion.a
+              href="mailto:hello@botch-bowl.com"
+              className={cIconLinkMail}
+              initial={{ rotate: 0 }}
+              whileHover={{ rotate: -16 }}
+              aria-label="mail"
+            >
+              <Mail className={cIcon} alt="E-Mail Icon" />
+            </motion.a>
+            <motion.a
+              href={isBrowser ? 'https://www.instagram.com/botchbowl/' : 'instagram://instagram.com/botchbowl/'}
+              target="_blank"
+              rel="noreferrer"
+              className={cIconLinkInstagram}
+              initial={{ rotate: 0 }}
+              whileHover={{ rotate: 16 }}
+              aria-label="instagram"
+            >
+              <Instagram className={cIcon} alt="Instagram Logo" />
+            </motion.a>
+          </div>
         </Container>
       </div>
     </motion.div>

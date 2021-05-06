@@ -1,10 +1,19 @@
 import * as React from 'react';
+import PropTypes from 'prop-types';
 import { Text, Button } from '@chakra-ui/react';
 import { Link } from 'gatsby';
 import TableLine from 'src/assets/images/table-line.svg';
 import { cTable, cTableRow, cTableLine, cButtonWrapper } from './styles.module.scss';
 
-const MembershipPrices = () => (
+const propTypes = {
+  withCTA: PropTypes.bool,
+};
+
+const defaultProps = {
+  withCTA: false,
+};
+
+const MembershipPrices = ({ withCTA }) => (
   <div className={cTable}>
     <TableLine className={cTableLine} />
     <div className={cTableRow}>
@@ -34,12 +43,17 @@ const MembershipPrices = () => (
       </div>
     </div>
     <TableLine className={cTableLine} />
-    <Link to="/mitgliedschaft/" className={cButtonWrapper}>
-      <Button variant="cta" size="sm">
-        Jetzt Mitglied werden
-      </Button>
-    </Link>
+    {withCTA && (
+      <Link to="/mitgliedschaft/" className={cButtonWrapper}>
+        <Button variant="cta" size="sm">
+          Jetzt Mitglied werden
+        </Button>
+      </Link>
+    )}
   </div>
 );
+
+MembershipPrices.propTypes = propTypes;
+MembershipPrices.defaultProps = defaultProps;
 
 export default MembershipPrices;

@@ -5,8 +5,9 @@ import Brand from 'src/assets/images/botch-white.svg';
 import Instagram from 'src/assets/images/instagram.svg';
 import Mail from 'src/assets/images/mail.svg';
 import { Text } from '@chakra-ui/react';
-import FooterLine from 'src/assets/images/footer-line.svg';
+import FooterLine from 'src/assets/images/footer-line-2.svg';
 import { motion } from 'framer-motion';
+import { isBrowser } from 'react-device-detect';
 import {
   cFooterLine,
   cFooter,
@@ -45,7 +46,7 @@ const Footer = () => (
             <Mail className={cIcon} alt="E-Mail Icon" />
           </motion.a>
           <motion.a
-            href="https://www.instagram.com/botchbowl/"
+            href={isBrowser ? 'https://www.instagram.com/botchbowl/' : 'instagram://instagram.com/botchbowl/'}
             target="_blank"
             rel="noreferrer"
             className={cIconLinkInstagram}

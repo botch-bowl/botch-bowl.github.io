@@ -1,20 +1,23 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import cc from 'classcat';
-import { section } from './styles.module.scss';
+import { cSection, cPaddingSmall } from './styles.module.scss';
 
 const propTypes = {
   children: PropTypes.node.isRequired,
-  className: PropTypes.string
+  className: PropTypes.string,
+  paddingSmall: PropTypes.bool
 };
 
 const defaultProps = {
-  className: ''
+  className: '',
+  paddingSmall: false
 };
 
-const Section = ({ children, className, ...props }) => {
+const Section = ({ children, className, paddingSmall, ...props }) => {
   const SectionClasses = cc({
-    [section]: true,
+    [cSection]: true,
+    [cPaddingSmall]: paddingSmall,
     [className]: !!className
   });
 

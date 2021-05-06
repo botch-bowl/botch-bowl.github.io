@@ -141,7 +141,7 @@ const MembershipForm = () => {
       <Container>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className={cSection}>
-            <Heading>Mitgliedsdaten</Heading>
+            <Heading pre="Max Muster">Mitgliedsdaten.</Heading>
             <div className={cRow}>
               <div className={cCol}>
                 <FormControl id="firstName">
@@ -275,7 +275,7 @@ const MembershipForm = () => {
 
           {isYoungerThen16 && (
             <div className={cSection}>
-              <Heading>Erziehungsberechtigter</Heading>
+              <Heading>Erziehungsberechtigter.</Heading>
               <div className={cRow}>
                 <div className={cCol}>
                   <FormControl id="firstName">
@@ -309,7 +309,7 @@ const MembershipForm = () => {
           )}
 
           <div className={cSection}>
-            <Heading>Jahresmitgliedsbeitrag</Heading>
+            <Heading pre="€ &#8383; $">Jahresbeitrag.</Heading>
             <Text>
               Der Jahresmitgliedsbeitrag
               {!!price && (

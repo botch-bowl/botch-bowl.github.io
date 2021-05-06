@@ -11,9 +11,9 @@ import {
   cardActive,
   heading,
   eventDate,
-  edgeCircle,
   arrow,
-  cImage
+  cImage,
+  cBackground
 } from './styles.module.scss';
 
 const propTypes = {
@@ -24,38 +24,36 @@ const propTypes = {
 };
 
 const defaultProps = {
-  link: '/'
+  link: null
 };
 
 const EventCard = ({ title, date, image, link }) => {
   const MotionBox = motion(Box);
   const imageLoaded = getImage(image);
 
-  const variants = {
-    default: {
-      width: 56,
-      height: 56,
-      borderRadius: '0px',
-      transition: {
-        type: 'spring'
-      }
-    },
-    hover: {
-      height: 326,
-      width: 266,
-      borderRadius: '4px',
-      transition: {
-        type: 'spring',
-        stiffness: 600,
-        damping: 35
-      }
-    }
-  };
-
   const cardClasses = cc({
     [card]: true,
     [cardActive]: !!link
   });
+
+  const variants = {
+    default: {
+      scaleY: 1,
+      transition: {
+        type: 'spring',
+        stiffness: 400,
+        damping: 100
+      }
+    },
+    hover: {
+      scaleY: 5,
+      transition: {
+        type: 'spring',
+        stiffness: 600,
+        damping: 60
+      }
+    }
+  };
 
   return (
     <Link to={link}>
@@ -69,6 +67,9 @@ const EventCard = ({ title, date, image, link }) => {
           loading="eager"
           layout="cover"
         />
+        <motion.svg variants={variants} className={cBackground} xmlns="http://www.w3.org/2000/svg" width="301.661" height="161.838" viewBox="0 0 301.661 161.838">
+          <path d="M534.682,1467.948s40.676-7.053,96.052-5.693,88.406,1.214,118.021,5.693,87.589,0,87.589,0v155.971H534.682Z" transform="translate(-534.682 -1462.081)" fill="#e88661" />
+        </motion.svg>
         <Heading className={heading} color="white" size="md">
           {title}
         </Heading>
@@ -76,9 +77,7 @@ const EventCard = ({ title, date, image, link }) => {
           {date}
         </Text>
         {!!link && (
-          <motion.div className={edgeCircle} variants={variants}>
-            <ArrowIcon className={arrow} />
-          </motion.div>
+          <ArrowIcon className={arrow} />
         )}
       </MotionBox>
     </Link>
