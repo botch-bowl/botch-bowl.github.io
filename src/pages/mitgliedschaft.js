@@ -19,10 +19,11 @@ const MembershipPage = () => (
           <br />
           <br />
           Natürlich darfst du als Mitglied das ganze Jahr zu den Öffnungszeiten (Mo-So, 10:00-22:00)
-          Skaten und genießt weitere Vorteile.
+          Skaten.
           <br />
           <br />
-          Außerdem bekommst du ein Botch T-Shirt als kleines Dankeschön.
+          Außerdem bekommst du ein exklusives Botch T-Shirt als kleines Dankeschön
+          (solange der Vorrat reicht).
         </Text>
         <MembershipPrices />
       </Container>

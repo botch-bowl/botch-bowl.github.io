@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Layout from 'src/components/Layout';
+import Section from 'src/components/Section';
 import Container from 'src/components/Container';
 import Heading from 'src/components/Heading';
 import { StaticImage } from 'gatsby-plugin-image';
@@ -18,27 +19,32 @@ const NotFoundPage = () => {
   const [randNum, setRandNum] = React.useState(generateRandomNum(0, 1));
 
   const handleGeneration = () => {
-    console.log('click');
-    setRandNum(generateRandomNum(0, 1));
+    setRandNum(generateRandomNum(0, 2));
+    console.log(randNum);
   };
 
   return (
     <Layout>
       <Seo title="404: Not found" noindex />
-      <Container className={cContainer}>
-        <Heading pre="404">
-          Not found
-        </Heading>
-        {randNum === 0 && (
-          <StaticImage className={cImg} onClick={() => handleGeneration()} src="../assets/images/atf/meidl.jpg" alt="Fs Smith" />
-        )}
-        {randNum === 1 && (
-          <StaticImage className={cImg} onClick={() => handleGeneration()} src="../assets/images/atf/bowl.jpg" alt="Fs Smith" />
-        )}
-        <Button onClick={() => navigate('/')} variant="brand">
-          Zur Startseite
-        </Button>
-      </Container>
+      <Section>
+        <Container className={cContainer}>
+          <Heading pre="404">
+            Not found
+          </Heading>
+          {randNum === 0 && (
+            <StaticImage className={cImg} onClick={() => handleGeneration()} src="../assets/images/404/404-1@2x.jpg" alt="Fs Smith" />
+          )}
+          {randNum === 1 && (
+            <StaticImage className={cImg} onClick={() => handleGeneration()} src="../assets/images/404/404-2@2x.jpg" alt="Fs Smith" />
+          )}
+          {randNum === 2 && (
+            <StaticImage className={cImg} onClick={() => handleGeneration()} src="../assets/images/404/404-3@2x.jpg" alt="Fs Smith" />
+          )}
+          <Button onClick={() => navigate('/')} variant="brand">
+            Zur Startseite
+          </Button>
+        </Container>
+      </Section>
     </Layout>
   );
 };

@@ -14,7 +14,7 @@ const DataPrivacyPage = () => (
       <Container>
         <Heading as="h1">Datenschutz</Heading>
         <Text>
-          Wir vom Botch Bowl Rollsportverein, Ansprechpartner Jakob Reitinger, Nikolaus-Gassner-
+          Wir vom Botch Bowl Rollsportverein, Nikolaus-Gassner-
           Straße 44, 5710 Kaprun (in weiterer Folge der Dienstleister) legen größten Wert auf den
           Schutz Deiner Daten und die Wahrung Deiner Privatsphäre. Nachstehend informieren wir Dich
           deshalb gem. Art 13 der Datenschutz-Grundverordnung (DSGVO) über die Erhebung und
@@ -61,13 +61,14 @@ const DataPrivacyPage = () => (
       <Container>
         <Heading className={cSubSubHeading}>1.2 Grundsätzliches</Heading>
         <Text>
-          Verantwortlich sind wir vom Botch Bowl Rollsportverein (Jakob Reitinger),
+          Verantwortlich sind wir vom Botch Bowl Rollsportverein,
           Nikolaus-Gassner- Straße 44, 5710 Kaprun. Ihr könnt uns in dieser Angelegenheit unter
         </Text>
         <a className={cLink} href="mail-to:hello@botch-bowl.com">
           hello@botch-bowl.com
         </a>
         <Text>
+          erreichen.
           Mit der Nutzung unserer Websites willigen Sie ein, dass wir bestimmte Daten erheben
           dürfen. Im Gegenzug verpflichten wir uns Deine Daten jederzeit zu schützen. Deine Daten
           werden von uns nicht zum Zwecke der Werbung an Dritte weitergegeben. Dritte erhalten Deine
@@ -87,14 +88,14 @@ const DataPrivacyPage = () => (
           unser Hostinganbieter Bestandsdaten, Kontaktdaten, Inhaltsdaten, Vertragsdaten,
           Nutzungsdaten, Meta- und Kommunikationsdaten von Kunden, Interessenten und Besuchern
           dieses Onlineangebotes auf Grundlage unserer berechtigten Interessen an einer effizienten
-          undsicheren Zurverfügungstellung dieses Onlineangebotes gem. Art. 6 Abs. 1 lit. f DSGVO
+          und sicheren Zurverfügungstellung dieses Onlineangebotes gem. Art. 6 Abs. 1 lit. f DSGVO
           i.V.m. Art. 28 DSGVO (Abschluss Auftragsverarbeitungsvertrag). Der Hostinganbieter bzw.
           wir erheben dabei auf Grundlage unseres berechtigten Interesses im Sinne des Art. 6 Abs. 1
           lit. f. DSGVO Daten über jeden Zugriff auf den Server auf dem sich dieser Dienst befindet
           (sogenannte Serverlogfiles). Dazu gehören Name der abgerufenen Webseite, Datei, Datum und
           Uhrzeit des Abrufs, übertragene Datenmenge, Meldung über erfolgreichen Abruf, Browsertyp
-          nebst Version, das Betriebssystem des Nutzers, Referrer URL (die zuvor besuchte Seite),
-          IP-Adresse und der anfragende Provider. Logfile-Informationen werden aus
+          nebst Version, das Betriebssystem des Nutzers, Referrer URL (die zuvor besuchte Seite)
+          und der anfragende Provider. Logfile-Informationen werden aus
           Sicherheitsgründen (z.B. zur Aufklärung von Missbrauchs- oder Betrugshandlungen)
           für die
           Dauer von maximal 30 Tagen gespeichert und danach gelöscht. Daten, deren weitere
@@ -112,16 +113,41 @@ const DataPrivacyPage = () => (
         <Text>
           Du hast jederzeit das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung und
           Datenübertragbarkeit Deiner gespeicherten Daten. Du kannst uns in dieser Angelegenheit
-          unter hello@botch-bowl.com kontaktieren. Nachfolgend findest Du einen Überblick Ihrer
-          Rechte im Einzelnen: Auskunftsrecht: Auf Anfrage erteilen wir Dir die Auskunft, welche
-          Daten von Dir bei uns gespeichert sind. Näheres finden Sie in Art 15 DSGVO. Berichtigung:
+          unter
+        </Text>
+        <a className={cLink} href="mail-to:hello@botch-bowl.com">
+          hello@botch-bowl.com
+        </a>
+        <Text>
+          kontaktieren. Nachfolgend findest Du einen Überblick Ihrer
+          Rechte im Einzelnen:
+          <br />
+          <br />
+          <strong>Auskunftsrecht: </strong>
+          Auf Anfrage erteilen wir Dir die Auskunft, welche
+          Daten von Dir bei uns gespeichert sind. Näheres finden Sie in Art 15 DSGVO.
+          <br />
+          <br />
+          <strong>Berichtigung: </strong>
           Sollten Daten bei uns unrichtig sein, so hast Du das Recht nach Art 16 DSGVO unrichtige
-          Daten zu vervollständigen bzw. zu berichtigen. Löschung und Einschränkung: Du hast das
+          Daten zu vervollständigen bzw. zu berichtigen.
+          <br />
+          <br />
+          <strong>Löschung und Einschränkung: </strong>
+          Du hast das
           Recht nach Art 17 DSGVO Daten unverzüglich zu löschen oder nach Art 18 DSGVO die
-          Datennutzung einzuschränken lassen. Datenübertragbarkeit: Bei berechtigtem Interesse
+          Datennutzung einzuschränken lassen.
+          <br />
+          <br />
+          <strong>Datenübertragbarkeit: </strong>
+          Bei berechtigtem Interesse
           hast
           Du das Recht Deine Daten nach Art 20 DSGVO zu erhalten, und die Übermittlung an Dritte zu
-          verlangen. Widerspruch/Widerruf: Du kannst jederzeit nach Art 21 DSVGO der Verarbeitung
+          verlangen.
+          <br />
+          <br />
+          <strong>Widerspruch/Widerruf: </strong>
+          Du kannst jederzeit nach Art 21 DSVGO der Verarbeitung
           Deiner Daten widersprechen, insbesondere gegen die Verarbeitung der Daten zwecks
           Direktwerbung (Newsletter). Wenn Du glaubst, dass die Verarbeitung Deiner Daten gegen das
           Datenschutzrecht verstößt oder Deine datenschutzrechtlichen Ansprüche sonst in einer

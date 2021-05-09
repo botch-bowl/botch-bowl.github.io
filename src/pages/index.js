@@ -46,10 +46,9 @@ const IndexPage = ({ data }) => (
 
     <Section>
       <Container>
-        <Heading pre="Episode 1">Pfusch am Bau TV.</Heading>
+        <Heading pre="Episode 2">Pfusch am Bau TV.</Heading>
         <Video
-          previewImage={data.file.childImageSharp}
-          youtubeUrl="https://www.youtube.com/watch?v=ihK0c5tV8jY&t=98s&ab_channel=BotchBowl"
+          youtubeUrl="https://www.youtube.com/embed/aXgnPj1UMNA"
         />
       </Container>
     </Section>
@@ -61,10 +60,11 @@ const IndexPage = ({ data }) => (
           <br />
           <br />
           Natürlich darfst du als Mitglied das ganze Jahr zu den Öffnungszeiten (Mo-So, 10:00-22:00)
-          Skaten und genießt weitere Vorteile.
+          Skaten.
           <br />
           <br />
-          Außerdem bekommst du ein Botch T-Shirt als kleines Dankeschön.
+          Außerdem bekommst du ein exklusives Botch T-Shirt als kleines Dankeschön
+          (solange der Vorrat reicht).
         </Text>
         <MembershipPrices withCTA />
       </Container>
@@ -74,9 +74,11 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   query HomeQuery {
-    file(relativePath: { eq: "atf/botch.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(width: 250, height: 310, formats: [AUTO, WEBP, AVIF])
+    allFile(filter: {relativePath: {in: ["events/kid@2x.jpg", "events/summer-opening.jpg"]}}) {
+      nodes {
+        childImageSharp {
+          gatsbyImageData(width: 250, height: 310, formats: [AUTO, WEBP, AVIF])
+        }
       }
     }
   }

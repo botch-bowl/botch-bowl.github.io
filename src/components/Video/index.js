@@ -1,10 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StaticImage } from 'gatsby-plugin-image';
 import { motion } from 'framer-motion';
 import PLayButton from 'src/assets/images/play-button.svg';
 import { cPreview, cImage, cPlayButton, ytWrapper, videoOverlay } from './styles.module.scss';
 
-const Video = () => {
+const propTypes = {
+  youtubeUrl: PropTypes.string.isRequired,
+};
+
+const Video = ({ youtubeUrl }) => {
   const [isPlayerOpen, setPlayerOpen] = React.useState(false);
 
   const playButtonVariants = {
@@ -37,7 +42,7 @@ const Video = () => {
             <iframe
               width="100%"
               height="auto"
-              src="https://www.youtube.com/embed/ihK0c5tV8jY?autoplay=1"
+              src={`${youtubeUrl}?autoplay=1`}
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -49,5 +54,7 @@ const Video = () => {
     </motion.div>
   );
 };
+
+Video.propTypes = propTypes;
 
 export default Video;

@@ -13,9 +13,10 @@ import {
   Select,
   Checkbox,
   Button,
-  Textarea
+  Textarea,
+  Spinner
 } from '@chakra-ui/react';
-import { Link } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
@@ -60,6 +61,7 @@ const MembershipForm = () => {
 
   const [isYoungerThen16, setYoungerThen16] = React.useState(false);
   const [price, setPrice] = React.useState(null);
+  const [isLoading, setLoading] = React.useState(false);
 
   const getAge = (birthDate) => {
     const today = new Date();
@@ -98,6 +100,22 @@ const MembershipForm = () => {
     }
   };
 
+  const sendMailToUser = (params) => {
+    emailjs.send(
+      'service_peak',
+      'template_8lzrkdm',
+      params,
+      'user_3o0WGgMZIZNLSk0FtvYR1'
+    )
+      .then(() => {
+        console.log('Mail sent');
+        setLoading(false);
+        navigate('/danke/');
+      }, (error) => {
+        console.error(error.text);
+      });
+  };
+
   const sendMail = (data) => {
     const now = new Date();
     const options = { year: 'numeric', month: 'numeric', day: 'numeric' };
@@ -109,11 +127,10 @@ const MembershipForm = () => {
     ${data.parentPhone}|${data.privacyPolicy}|${data.newsletter}|${data.imageUse}|${price}|
     ${date}"; "|")`;
 
-    console.log(gdoc);
-
     const params = {
       firstname: data.firstName,
       lastname: data.lastName,
+      email: data.mail,
       docsString: gdoc,
     };
 
@@ -123,16 +140,15 @@ const MembershipForm = () => {
       params,
       'user_3o0WGgMZIZNLSk0FtvYR1'
     )
-      .then((result) => {
-        console.log(result.text);
+      .then(() => {
+        sendMailToUser(params);
       }, (error) => {
-        console.log(error.text);
+        console.error(error.text);
       });
   };
 
   const onSubmit = (e) => {
-    console.log('submit');
-    console.log(e);
+    setLoading(true);
     sendMail(e);
   };
 
@@ -352,12 +368,6 @@ const MembershipForm = () => {
                       Datenschutzerklärung
                       {' '}
                     </Link>
-                    und die
-                    <Link className={cLink} to="/statuten/">
-                      {' '}
-                      Statuten
-                      {' '}
-                    </Link>
                     des Botch Bowl Rollsportvereins.
                   </Checkbox>
                   <FormHelperText>{errors.privacyPolicy?.message}</FormHelperText>
@@ -392,7 +402,14 @@ const MembershipForm = () => {
           </div>
           <div className={cSection}>
             <Button type="submit" variant="brand">
-              Absenden
+              {isLoading && (
+                <Spinner />
+              )}
+              {!isLoading && (
+                <>
+                  Absenden
+                </>
+              )}
             </Button>
           </div>
         </form>

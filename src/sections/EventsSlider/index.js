@@ -20,10 +20,10 @@ const EventsSlider = ({ data }) => (
     </Container>
     <Slider>
       <div>
-        <EventCard title="Summer Opening" date="TBA" image={data.file.childImageSharp} />
+        <EventCard title="Summer Opening" date="TBA" image={data.allFile.nodes[1].childImageSharp} />
       </div>
       <div>
-        <EventCard title="Kids Skatekurs" date="TBA" image={data.file.childImageSharp} />
+        <EventCard title="Kids Skatekurs" date="TBA" image={data.allFile.nodes[0].childImageSharp} />
       </div>
       <div>
         <NoMoreEventsCard />
