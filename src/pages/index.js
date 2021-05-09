@@ -29,7 +29,7 @@ const IndexPage = ({ data }) => (
           <strong>Botch. ist ein DIY Skate Bowl in Kaprun.</strong>
           <br />
           <br />
-          Der Bowl ist in den letzten Jahren fertig gegestellt worden und wir sind momentan mit dem
+          Der Bowl ist in den letzten Jahren fertig gestellt worden und wir sind momentan mit dem
           Weiterbau rund um den Bowl beschäftigt.
           <br />
           <br />
