@@ -33,7 +33,7 @@ const IndexPage = ({ data }) => (
           Weiterbau rund um den Bowl beschäftigt.
           <br />
           <br />
-          Seit 2020 ist Botch. auch ein Rollsportverein mit schon mehr als 30 Mitgliedern die den
+          Seit 2020 ist Botch. auch ein Rollsportverein mit schon mehr als 40 Mitgliedern die den
           Weiterbau und den Skatesport unterstützen.
           <br />
           <br />
