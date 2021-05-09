@@ -36,6 +36,8 @@
   background-color: rgba($color-brand, 0.9);
   border-radius: 28px;
   z-index: 0;
+  // Create new stacking context as workaround for safari borer-radius bug
+  transform: translateZ(0);
 }
 
 .arrow {
