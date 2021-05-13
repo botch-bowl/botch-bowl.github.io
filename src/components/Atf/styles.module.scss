@@ -40,7 +40,9 @@ $offsetTopDesktop: 88px;
 }
 
 .cImg {
-  border-radius: 8px;
+  border-radius: 12px;
+  overflow: hidden;
+  transform: translateZ(0);
 }
 
 @mixin containerOffset($y, $x) {
@@ -128,4 +130,8 @@ $offsetTopDesktop: 88px;
 .cIndicator {
   width: 40px;
   height: 40px;
+}
+
+.cBorderRadius {
+  border-radius: 12px;
 }

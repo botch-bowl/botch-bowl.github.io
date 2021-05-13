@@ -5,6 +5,7 @@
   width: 250px;
   height: 310px;
   margin-right: 32px;
+  border-radius: 12px;
 }
 
 .cardActive:hover {
@@ -26,20 +27,6 @@
   z-index: 1;
 }
 
-.edgeCircle {
-  position: absolute;
-  height: 56px;
-  width: 56px;
-  overflow: hidden;
-  bottom: -16px;
-  right: -16px;
-  background-color: rgba($color-brand, 0.9);
-  border-radius: 28px;
-  z-index: 0;
-  // Create new stacking context as workaround for safari borer-radius bug
-  transform: translateZ(0);
-}
-
 .arrow {
   position: absolute;
   right: 16px;
@@ -49,6 +36,7 @@
 
 .cImage {
   filter: grayscale(100%);
+  border-radius: 12px;
 }
 
 .cBackground {
@@ -56,4 +44,6 @@
   bottom: -88px;
   opacity: 0.9;
   z-index: 1;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
