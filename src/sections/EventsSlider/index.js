@@ -5,7 +5,7 @@ import Section from 'src/components/Section';
 import Heading from 'src/components/Heading';
 import Slider from 'src/components/Slider';
 import EventCard from 'src/components/EventCard';
-import NoMoreEventsCard from 'src/components/NoMoreEventsCard';
+// import NoMoreEventsCard from 'src/components/NoMoreEventsCard';
 
 const propTypes = {
   data: PropTypes.objectOf(PropTypes.object).isRequired
@@ -15,18 +15,12 @@ const EventsSlider = ({ data }) => (
   <Section>
     <Container>
       <Heading pre="Skatekurse, Parties und co" style={{ marginBottom: '40px' }}>
-        Aktuelle Events.
+        Events.
       </Heading>
     </Container>
     <Slider>
       <div>
-        <EventCard title="Summer Opening" date="TBA" image={data.allFile.nodes[1].childImageSharp} />
-      </div>
-      <div>
-        <EventCard title="Kids Skatekurs" date="TBA" image={data.allFile.nodes[0].childImageSharp} />
-      </div>
-      <div>
-        <NoMoreEventsCard />
+        <EventCard title="Botch. Inferno Bowl Jam" date="18.09.2021" image={data.allFile.nodes[0].childImageSharp} />
       </div>
     </Slider>
   </Section>

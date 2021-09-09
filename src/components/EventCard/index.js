@@ -4,7 +4,7 @@ import { Box, Heading, Text } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import ArrowIcon from 'src/assets/images/arrow-right-2.svg';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { Link } from 'gatsby';
+// import { Link } from 'gatsby';
 import cc from 'classcat';
 import {
   card,
@@ -29,6 +29,7 @@ const defaultProps = {
 
 const EventCard = ({ title, date, image, link }) => {
   const MotionBox = motion(Box);
+  console.log(image);
   const imageLoaded = getImage(image);
 
   const cardClasses = cc({
@@ -56,7 +57,7 @@ const EventCard = ({ title, date, image, link }) => {
   };
 
   return (
-    <Link to={link}>
+    <div>
       <MotionBox className={cardClasses} borderRadius="lg" overflow="hidden" whileHover="hover">
         <GatsbyImage
           className={cImage}
@@ -80,7 +81,7 @@ const EventCard = ({ title, date, image, link }) => {
           <ArrowIcon className={arrow} />
         )}
       </MotionBox>
-    </Link>
+    </div>
   );
 };
 

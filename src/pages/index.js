@@ -19,9 +19,7 @@ const propTypes = {
 const IndexPage = ({ data }) => (
   <Layout>
     <Seo title="Startseite" />
-
     <Atf />
-
     <Section id="we-are-botch">
       <Container>
         <Heading pre="Über uns">We are Botch.</Heading>
@@ -74,7 +72,7 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   query HomeQuery {
-    allFile(filter: {relativePath: {in: ["events/kid@2x.jpg", "events/summer-opening.jpg"]}}) {
+    allFile(filter: {relativePath: {in: ["events/inferno@2x.jpg"]}}) {
       nodes {
         childImageSharp {
           gatsbyImageData(width: 250, height: 310, formats: [AUTO, WEBP, AVIF])
