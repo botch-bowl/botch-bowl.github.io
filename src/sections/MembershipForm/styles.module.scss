@@ -1,0 +1,45 @@
+@use "variables" as *;
+@use "mixins" as mix;
+
+.cRow {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -16px;
+  margin-right: -16px;
+  flex-direction: column;
+
+  @include mix.breakpoint('md') {
+    flex-direction: row;
+  }
+}
+
+.cCol {
+  flex-basis: 0;
+  flex-grow: 1;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.cColMd4 {
+  @extend .cCol;
+
+  @include mix.breakpoint('md') {
+    max-width: 30%;
+  }
+}
+
+.cColMd8 {
+  @extend .cCol;
+
+  @include mix.breakpoint('md') {
+    max-width: 70%;
+  }
+}
+
+.cLink {
+  color: $color-brand;
+}
+
+.cSection {
+  margin-bottom: 72px;
+}

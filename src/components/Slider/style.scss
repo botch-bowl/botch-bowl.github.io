@@ -1,0 +1,13 @@
+.glider::-webkit-scrollbar {
+  display: none; /* Chrome Safari */
+  scrollbar-width: none; /* Firefox */
+}
+
+.glider-slide {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button.disabled {
+  display: none;
+}

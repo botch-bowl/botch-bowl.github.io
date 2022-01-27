@@ -1,0 +1,125 @@
+@use 'variables' as *;
+@use 'mixins';
+
+.menu {
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: $color-brand;
+}
+
+.header {
+  height: 64px;
+  width: 100%;
+}
+
+.brand {
+  height: 24px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.closeButton {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.cBody {
+  margin-top: 40px;
+}
+
+.cNav {
+  display: flex;
+  flex-direction: column;
+}
+
+.cLinkActive {
+  position: relative;
+  width: fit-content;
+
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    right: -32px;
+    top: calc(50% - 8px);
+    width: 18px;
+    height: 14px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.981' height='14.733' viewBox='0 0 17.981 14.733'%3E%3Cg id='Group_34' data-name='Group 34' transform='translate(-274.68 -315.133) rotate(90)'%3E%3Cpath id='Path_9' data-name='Path 9' d='M315.342-289.428s4.884,5.623,6.053,5.681,5.86-5.432,5.86-5.432' transform='translate(1.202 8.067)' fill='none' stroke='%23131313' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/%3E%3Cpath id='Path_10' data-name='Path 10' d='M322.5-276.414v-15.247' fill='none' stroke='%23131313' stroke-linecap='round' stroke-width='2'/%3E%3C/g%3E%3C/svg%3E%0A");
+  }
+}
+
+.cLink {
+  font-family: $font-primary;
+  font-size: 2rem;
+  color: $color-secondary;
+  font-weight: 600;
+  margin-top: 8px;
+  position: relative;
+  width: fit-content;
+
+  &:hover {
+    &:after {
+      display: block;
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      top: auto;
+      right: auto;
+      width: 100%;
+      height: 14px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='307.571' height='5.097' viewBox='0 0 307.571 5.097'%3E%3Cpath vector-effect='non-scaling-stroke' d='M1034.162-922s62.652-.729,98.441,0,56.361,0,105.727,0,101.34-2.758,101.34-2.758' transform='translate(-1033.151 925.809)' fill='none' stroke='%23131313' stroke-linecap='round' stroke-width='2'/%3E%3C/svg%3E%0A");
+    }
+  }
+}
+
+
+.cIconLink {
+  background-color: $color-brand;
+  border-radius: 16px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 8px;
+
+  @include mixins.breakpoint(md) {
+    margin: 0 0 0 16px;
+  }
+
+  &:hover {
+    transition: background-color 0.2s ease-in-out;
+  }
+}
+.cIcon {
+  width: 56px;
+}
+
+.cIconLinkMail {
+  @extend .cIconLink;
+  margin-left: 0;
+}
+
+.cIconLinkInstagram {
+  @extend .cIconLink;
+}
+
+.cIconWrapper {
+  position: absolute;
+  bottom: 32px;
+  display: flex;
+  margin-top: 80px;
+}

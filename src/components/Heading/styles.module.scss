@@ -1,0 +1,40 @@
+@use 'variables' as *;
+@use 'mixins' as mix;
+
+.cHeading {
+  color: $color-secondary;
+  line-height: 1;
+  font-size: 2.4rem !important;
+}
+
+.cHeadingLarge {
+  font-size: 2.4rem !important;
+
+  @include mix.breakpoint('md') {
+    font-size: 3rem !important;
+  }
+}
+
+.cPre {
+  color: $color-brand;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.cPost {
+  color: $color-brand;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.cWrapper {
+  margin-bottom: 24px;
+}
+
+.cLastChar {
+  color: $color-secondary;
+}

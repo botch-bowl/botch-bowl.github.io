@@ -1,0 +1,137 @@
+@use 'mixins' as mix;
+@use 'variables' as *;
+@use 'sass:map';
+
+$offsetTopMobile: 40px;
+$offsetTopDesktop: 88px;
+
+.cAtf {
+  position: relative;
+  height: 1720px;
+  width: 100%;
+}
+
+.cHeadingWrapper {
+  position: fixed;
+  top: 40px + $offsetTopMobile;
+  left: 16px;
+
+  @include mix.breakpoint('sm') {
+    top: 40px + $offsetTopMobile;
+    left: calc( 50% + 16px - #{map.get($container-max-widths, 'sm')} / 2);
+  }
+
+  @include mix.breakpoint('md') {
+    top: 40px + $offsetTopDesktop;
+    left: calc( 50% + 16px - #{map.get($container-max-widths, 'md')} / 2);
+  }
+}
+
+.cHeading {
+  max-width: 260px;
+
+  @include mix.breakpoint('md') {
+    max-width: 346px;
+  }
+}
+
+%image {
+  position: fixed;
+}
+
+.cImg {
+  border-radius: 12px;
+  overflow: hidden;
+  transform: translateZ(0);
+}
+
+@mixin containerOffset($y, $x) {
+  top: $y + $offsetTopMobile;
+   left: -$x;
+
+  @include mix.breakpoint('sm') {
+    top: $y + $offsetTopMobile;
+    left: calc( 50% - #{$x} - #{map.get($container-max-widths, 'sm')} / 2);
+  }
+
+  @include mix.breakpoint('md') {
+    top: $y + $offsetTopDesktop;
+    left: calc( 50% - #{$x} - #{map.get($container-max-widths, 'md')} / 2);
+  }
+}
+
+.cImage1 {
+  @extend %image;
+  width: 400px;
+
+  @include containerOffset(180px, 120px);
+}
+
+.cImage2 {
+  @extend %image;
+  width: 200px;
+  @include containerOffset(40px, 360px);
+
+}
+
+.cImage3 {
+  @extend %image;
+  width: 320px;
+  @include containerOffset(380px, 500px);
+}
+
+.cImage4 {
+  @extend %image;
+  width: 320px;
+  @include containerOffset(172px, 740px);
+}
+
+.cImage5 {
+  @extend %image;
+  width: 200px;
+  @include containerOffset(400px, 740px);
+}
+
+.cImage6 {
+  @extend %image;
+  width: 180px;
+
+  @include containerOffset(280px, 960px);
+}
+
+.cLinkWrapper {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  @include mix.breakpoint('sm') {
+    left: calc( 50% + 16px - #{map.get($container-max-widths, 'sm')} / 2);
+    top: 592px;
+    bottom: auto;
+  }
+
+  @include mix.breakpoint('md') {
+    left: calc( 50% + 16px - #{map.get($container-max-widths, 'md')} / 2);
+  }
+}
+
+.cLink {
+  font-family: $font-secondary;
+  margin-left: 16px;
+  color: $color-gray;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.cIndicator {
+  width: 40px;
+  height: 40px;
+}
+
+.cBorderRadius {
+  border-radius: 12px;
+}

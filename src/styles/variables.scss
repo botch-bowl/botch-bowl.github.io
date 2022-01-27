@@ -1,0 +1,23 @@
+$color-primary: #F5F5F5;
+$color-secondary: #131313;
+$color-brand: #e88661;
+
+$color-gray: #BBBBBB;
+
+$font-primary: 'Minion Pro';
+$font-secondary: Montserrat;
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px
+) !default;
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 720px,
+        xl: 720px
+) !default;
