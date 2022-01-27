@@ -40,7 +40,7 @@ const IndexPage = ({ data }) => (
       </Container>
     </Section>
 
-    <EventsSlider data={data} />
+    { /* <EventsSlider data={data} /> */ }
 
     <Section>
       <Container>
