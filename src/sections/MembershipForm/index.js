@@ -363,11 +363,11 @@ const MembershipForm = () => {
                   <FormLabel variant="brand">Datenschutz *</FormLabel>
                   <Checkbox colorScheme="orange" variant="brand" {...register('privacyPolicy')}>
                     Hiermit akzeptiere ich die
-                    <Link className={cLink} to="/datenschutz/">
+                    <a className={cLink} href="/datenschutz/" target="blank">
                       {' '}
                       Datenschutzerklärung
                       {' '}
-                    </Link>
+                    </a>
                     des Botch Bowl Rollsportvereins.
                   </Checkbox>
                   <FormHelperText>{errors.privacyPolicy?.message}</FormHelperText>
