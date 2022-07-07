@@ -1,0 +1,18 @@
+.navbar {
+  height: 60px;
+  background-color: $color-secondary;
+  display: flex;
+  align-items: center;
+
+  @include breakpoint(lg){
+    height: 80px;
+  }
+}
+
+.brand {
+
+}
+
+.menu {
+
+}
