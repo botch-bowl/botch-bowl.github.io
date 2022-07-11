@@ -1,0 +1,11 @@
+<svg id="Brand" xmlns="http://www.w3.org/2000/svg" width="99.906" height="15.293" viewBox="0 0 99.906 15.293">
+  <path id="Path_1" data-name="Path 1" d="M494.246,260.293a7.647,7.647,0,1,1,7.646-7.647A7.658,7.658,0,0,1,494.246,260.293Zm0-12.391a4.688,4.688,0,1,0,4.688,4.688,4.717,4.717,0,0,0-4.688-4.688Z" transform="translate(-401.987 -245)" fill="#292929"/>
+  <path id="Path_2" data-name="Path 2" d="M348.73,260.074V246.4h-3.237l-3.628,5.8-3.628-5.8H335v13.674h2.958V251.2l3.851,5.8h.056l3.851-5.86v8.93Z" transform="translate(-335 -245.619)" fill="#292929"/>
+  <path id="Path_3" data-name="Path 3" d="M424.93,246.4v13.73h-3.293l-3.572-5.8-3.628,5.8H411.2V246.4h2.958v8.93l3.851-5.8h.056l3.851,5.86V246.4Z" transform="translate(-368.67 -245.619)" fill="#292929"/>
+  <g id="Group_1" data-name="Group 1" transform="translate(20.707 0.781)">
+    <path id="Path_4" data-name="Path 4" d="M464.337,246.4H451.5v2.847h12.837Z" transform="translate(-407.184 -246.4)" fill="#292929" fill-rule="evenodd"/>
+    <path id="Path_5" data-name="Path 5" d="M464.337,256.1H451.5v2.846h12.837Z" transform="translate(-407.184 -250.686)" fill="#292929" fill-rule="evenodd"/>
+    <path id="Path_6" data-name="Path 6" d="M383.653,260.074h3.237L380.974,246.4h-2.958L372.1,260.074h3.237l4.13-10.27Z" transform="translate(-372.1 -246.4)" fill="#292929" fill-rule="evenodd"/>
+    <path id="Path_7" data-name="Path 7" d="M464.337,265.8H451.5v2.846h12.837Z" transform="translate(-407.184 -254.972)" fill="#292929" fill-rule="evenodd"/>
+  </g>
+</svg>

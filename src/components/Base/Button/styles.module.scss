@@ -1,0 +1,23 @@
+.button {
+  display: inline-flex;
+  min-height: 40px;
+  padding: 16px;
+  background-color: grey;
+  justify-content: center;
+  align-items: center;
+
+  font-family: $font-primary;
+  color: $color-primary;
+  text-decoration: none;
+}
+
+.primary {
+  background-color: $color-primary;
+
+  &:hover {
+    background-color: $color-primary-hover;
+  }
+}
+.rounded {
+  border-radius: 8px;
+}
