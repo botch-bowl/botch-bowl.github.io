@@ -16,7 +16,7 @@ import {
   Textarea,
   Spinner
 } from '@chakra-ui/react';
-import { Link, navigate } from 'gatsby';
+import { navigate } from 'gatsby';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
