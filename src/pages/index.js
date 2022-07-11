@@ -40,7 +40,7 @@ const IndexPage = ({ data }) => (
       </Container>
     </Section>
 
-    { /* <EventsSlider data={data} /> */ }
+    <EventsSlider data={data} />
 
     <Section>
       <Container>
@@ -72,7 +72,7 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   query HomeQuery {
-    allFile(filter: {relativePath: {in: ["events/inferno@2x.jpg"]}}) {
+    allFile(filter: {relativeDirectory: {eq: "events/2022"}}) {
       nodes {
         childImageSharp {
           gatsbyImageData(width: 250, height: 310, formats: [AUTO, WEBP, AVIF])
