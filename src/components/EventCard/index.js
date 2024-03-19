@@ -68,8 +68,19 @@ const EventCard = ({ title, date, image, link }) => {
           loading="eager"
           layout="cover"
         />
-        <motion.svg variants={variants} className={cBackground} xmlns="http://www.w3.org/2000/svg" width="301.661" height="161.838" viewBox="0 0 301.661 161.838">
-          <path d="M534.682,1467.948s40.676-7.053,96.052-5.693,88.406,1.214,118.021,5.693,87.589,0,87.589,0v155.971H534.682Z" transform="translate(-534.682 -1462.081)" fill="#e88661" />
+        <motion.svg
+          variants={variants}
+          className={cBackground}
+          xmlns="http://www.w3.org/2000/svg"
+          width="301.661"
+          height="161.838"
+          viewBox="0 0 301.661 161.838"
+        >
+          <path
+            d="M534.682,1467.948s40.676-7.053,96.052-5.693,88.406,1.214,118.021,5.693,87.589,0,87.589,0v155.971H534.682Z"
+            transform="translate(-534.682 -1462.081)"
+            fill="#e88661"
+          />
         </motion.svg>
         <Heading className={heading} color="white" size="md">
           {title}
@@ -77,9 +88,7 @@ const EventCard = ({ title, date, image, link }) => {
         <Text className={eventDate} color="white" fontSize="14px">
           {date}
         </Text>
-        {!!link && (
-          <ArrowIcon className={arrow} />
-        )}
+        {!!link && <ArrowIcon className={arrow} />}
       </MotionBox>
     </div>
   );

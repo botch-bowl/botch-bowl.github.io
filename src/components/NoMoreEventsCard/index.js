@@ -1,9 +1,6 @@
 import * as React from 'react';
 import { Text } from '@chakra-ui/react';
-import {
-  cCard,
-  cHeading
-} from './styles.module.scss';
+import { cCard, cHeading } from './styles.module.scss';
 
 const NoMoreEventsCard = () => (
   <div className={cCard}>

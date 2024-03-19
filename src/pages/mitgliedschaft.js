@@ -22,8 +22,8 @@ const MembershipPage = () => (
           Skaten.
           <br />
           <br />
-          Außerdem bekommst du ein exklusives Botch T-Shirt als kleines Dankeschön
-          (solange der Vorrat reicht).
+          Außerdem bekommst du ein exklusives Botch T-Shirt als kleines Dankeschön (solange der
+          Vorrat reicht).
         </Text>
         <MembershipPrices />
       </Container>

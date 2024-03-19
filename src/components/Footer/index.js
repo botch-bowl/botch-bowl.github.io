@@ -46,7 +46,11 @@ const Footer = () => (
             <Mail className={cIcon} alt="E-Mail Icon" />
           </motion.a>
           <motion.a
-            href={isBrowser ? 'https://www.instagram.com/botchbowl/' : 'instagram://instagram.com/botchbowl/'}
+            href={
+              isBrowser
+                ? 'https://www.instagram.com/botchbowl/'
+                : 'instagram://instagram.com/botchbowl/'
+            }
             target="_blank"
             rel="noreferrer"
             className={cIconLinkInstagram}

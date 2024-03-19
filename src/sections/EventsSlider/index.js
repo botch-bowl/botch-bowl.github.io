@@ -20,13 +20,32 @@ const EventsSlider = ({ data }) => (
     </Container>
     <Slider>
       <div>
-        <EventCard title="Botch - Out of this World!" date="20.08.2022" image={data.allFile.nodes[2].childImageSharp} />
+        <EventCard
+          title="Botch - Season Opening"
+          date="11.05.2024"
+          image={data.allFile.nodes[3].childImageSharp}
+        />
       </div>
       <div>
-        <EventCard title="Botch x Dorffest " date="12.08. & 13.08.2022" image={data.allFile.nodes[0].childImageSharp} />
+        <EventCard
+          title="Botch - Out of this World!"
+          date="20.08.2022"
+          image={data.allFile.nodes[2].childImageSharp}
+        />
       </div>
       <div>
-        <EventCard title="Botch - Season Opening" date="27. 05.2022" image={data.allFile.nodes[1].childImageSharp} />
+        <EventCard
+          title="Botch x Dorffest "
+          date="12.08. & 13.08.2022"
+          image={data.allFile.nodes[0].childImageSharp}
+        />
+      </div>
+      <div>
+        <EventCard
+          title="Botch - Season Opening"
+          date="27. 05.2022"
+          image={data.allFile.nodes[1].childImageSharp}
+        />
       </div>
     </Slider>
   </Section>

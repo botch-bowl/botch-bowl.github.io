@@ -76,7 +76,7 @@ Seo.defaultProps = {
   lang: 'en',
   meta: [],
   description: '',
-  noindex: false,
+  noindex: false
 };
 
 Seo.propTypes = {

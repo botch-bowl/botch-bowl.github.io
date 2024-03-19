@@ -101,19 +101,16 @@ const MembershipForm = () => {
   };
 
   const sendMailToUser = (params) => {
-    emailjs.send(
-      'service_peak',
-      'template_8lzrkdm',
-      params,
-      'user_3o0WGgMZIZNLSk0FtvYR1'
-    )
-      .then(() => {
+    emailjs.send('service_peak', 'template_8lzrkdm', params, 'user_3o0WGgMZIZNLSk0FtvYR1').then(
+      () => {
         console.log('Mail sent');
         setLoading(false);
         navigate('/danke/');
-      }, (error) => {
+      },
+      (error) => {
         console.error(error.text);
-      });
+      }
+    );
   };
 
   const sendMail = (data) => {
@@ -131,20 +128,19 @@ const MembershipForm = () => {
       firstname: data.firstName,
       lastname: data.lastName,
       email: data.mail,
-      docsString: gdoc,
+      docsString: gdoc
     };
 
-    emailjs.send(
-      'service_peak',
-      'template_membership_form',
-      params,
-      'user_3o0WGgMZIZNLSk0FtvYR1'
-    )
-      .then(() => {
-        sendMailToUser(params);
-      }, (error) => {
-        console.error(error.text);
-      });
+    emailjs
+      .send('service_peak', 'template_membership_form', params, 'user_3o0WGgMZIZNLSk0FtvYR1')
+      .then(
+        () => {
+          sendMailToUser(params);
+        },
+        (error) => {
+          console.error(error.text);
+        }
+      );
   };
 
   const onSubmit = (e) => {
@@ -332,21 +328,17 @@ const MembershipForm = () => {
                 <>
                   {' '}
                   von
-                  <strong>
-                    {` ${price} `}
-                  </strong>
+                  <strong>{` ${price} `}</strong>
                 </>
-              )}
-              {' '}
-              ist bei Vereinseintritt innerhalb von 14 Tagen und bei
-              laufenden Mitgliedschaften bis zum 01. April des Jahres zu zahlen.
+              )}{' '}
+              ist bei Vereinseintritt innerhalb von 14 Tagen und bei laufenden Mitgliedschaften bis
+              zum 01. April des Jahres zu zahlen.
               <br />
               <br />
               Der Mitgliedsbeitrag wird fristgerecht mittels
               <a className={cLink} href="/impressum#bankverbindung" target="_blank">
                 {' '}
-                Banküberweisung
-                {' '}
+                Banküberweisung{' '}
               </a>
               oder per Barzahlung bezahlt.
               <br />
@@ -365,8 +357,7 @@ const MembershipForm = () => {
                     Hiermit akzeptiere ich die
                     <a className={cLink} href="/datenschutz/" target="blank">
                       {' '}
-                      Datenschutzerklärung
-                      {' '}
+                      Datenschutzerklärung{' '}
                     </a>
                     des Botch Bowl Rollsportvereins.
                   </Checkbox>
@@ -402,14 +393,8 @@ const MembershipForm = () => {
           </div>
           <div className={cSection}>
             <Button type="submit" variant="brand">
-              {isLoading && (
-                <Spinner />
-              )}
-              {!isLoading && (
-                <>
-                  Absenden
-                </>
-              )}
+              {isLoading && <Spinner />}
+              {!isLoading && <>Absenden</>}
             </Button>
           </div>
         </form>

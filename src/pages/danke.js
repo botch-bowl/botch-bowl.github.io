@@ -13,9 +13,7 @@ const ThankYouPage = () => (
     <Seo title="Danke" noindex />
     <Section>
       <Container className={cContainer}>
-        <Heading pre="Hell yeah">
-          Danke für deine Anmeldung!
-        </Heading>
+        <Heading pre="Hell yeah">Danke für deine Anmeldung!</Heading>
         <Button onClick={() => navigate('/')} variant="brand">
           Zurück zur Startseite
         </Button>

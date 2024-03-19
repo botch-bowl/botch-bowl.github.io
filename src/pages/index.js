@@ -45,9 +45,7 @@ const IndexPage = ({ data }) => (
     <Section>
       <Container>
         <Heading pre="Episode 2">Pfusch am Bau TV.</Heading>
-        <Video
-          youtubeUrl="https://www.youtube.com/embed/aXgnPj1UMNA"
-        />
+        <Video youtubeUrl="https://www.youtube.com/embed/aXgnPj1UMNA" />
       </Container>
     </Section>
     <Section>
@@ -61,8 +59,8 @@ const IndexPage = ({ data }) => (
           Skaten.
           <br />
           <br />
-          Außerdem bekommst du ein exklusives Botch T-Shirt als kleines Dankeschön
-          (solange der Vorrat reicht).
+          Außerdem bekommst du ein exklusives Botch T-Shirt als kleines Dankeschön (solange der
+          Vorrat reicht).
         </Text>
         <MembershipPrices withCTA />
       </Container>
@@ -72,7 +70,7 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   query HomeQuery {
-    allFile(filter: {relativeDirectory: {eq: "events/2022"}}) {
+    allFile(filter: { relativeDirectory: { eq: "events/2022" } }) {
       nodes {
         childImageSharp {
           gatsbyImageData(width: 250, height: 310, formats: [AUTO, WEBP, AVIF])

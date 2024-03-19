@@ -14,19 +14,19 @@ const DataPrivacyPage = () => (
       <Container>
         <Heading as="h1">Datenschutz</Heading>
         <Text>
-          Wir vom Botch Bowl Rollsportverein, Nikolaus-Gassner-
-          Straße 44, 5710 Kaprun (in weiterer Folge der Dienstleister) legen größten Wert auf den
-          Schutz Deiner Daten und die Wahrung Deiner Privatsphäre. Nachstehend informieren wir Dich
-          deshalb gem. Art 13 der Datenschutz-Grundverordnung (DSGVO) über die Erhebung und
-          Verwendung persönlicher Daten bei Nutzung unserer Webseiten. Bei Fragen über
-          Begrifflichkeiten verweisen wir auf Art 4 DSGVO. Grundsätzlich verarbeiten wir die Daten
-          im rechtlichen Rahmen der DSGVO und des Datenschutzgesetzes. Wir verpflichten uns, die
-          Daten der Besucher unserer Webseiten zu schützen. Dritten werden die gespeicherten Daten
-          nur in der in dieser Erklärung beschriebenen Weise zur Verfügung gestellt. Es werden
-          selbstverständlich keine personenbezogenen Daten an Werbefirmen weitergegeben. Wir
-          behalten uns das Recht vor, die in dieser Datenschutzerklärung bereitgestellten
-          Informationen ohne vorherige Ankündigung an eine veränderte Gesetzgebung oder
-          Rechtsprechung anzupassen. Gültig ist die jeweils hier veröffentlichte aktuelle Version.
+          Wir vom Botch Bowl Rollsportverein, Nikolaus-Gassner- Straße 44, 5710 Kaprun (in weiterer
+          Folge der Dienstleister) legen größten Wert auf den Schutz Deiner Daten und die Wahrung
+          Deiner Privatsphäre. Nachstehend informieren wir Dich deshalb gem. Art 13 der
+          Datenschutz-Grundverordnung (DSGVO) über die Erhebung und Verwendung persönlicher Daten
+          bei Nutzung unserer Webseiten. Bei Fragen über Begrifflichkeiten verweisen wir auf Art 4
+          DSGVO. Grundsätzlich verarbeiten wir die Daten im rechtlichen Rahmen der DSGVO und des
+          Datenschutzgesetzes. Wir verpflichten uns, die Daten der Besucher unserer Webseiten zu
+          schützen. Dritten werden die gespeicherten Daten nur in der in dieser Erklärung
+          beschriebenen Weise zur Verfügung gestellt. Es werden selbstverständlich keine
+          personenbezogenen Daten an Werbefirmen weitergegeben. Wir behalten uns das Recht vor, die
+          in dieser Datenschutzerklärung bereitgestellten Informationen ohne vorherige Ankündigung
+          an eine veränderte Gesetzgebung oder Rechtsprechung anzupassen. Gültig ist die jeweils
+          hier veröffentlichte aktuelle Version.
         </Text>
       </Container>
     </Section>
@@ -36,8 +36,7 @@ const DataPrivacyPage = () => (
         <Text>
           Diese Datenschutzerklärung gilt für die Domain botch-bowl.com und all ihren Subdomains.
           Soweit nicht anders erwähnt, regelt diese Datenschutzerklärung ausschließlich, wie der
-          Dienstleister mit Deinen personenbezogenen Daten umgehen. Für den Fall, dass Du
-          Leistungen
+          Dienstleister mit Deinen personenbezogenen Daten umgehen. Für den Fall, dass Du Leistungen
           Dritter in Anspruch nimmst, gelten ausschließlich die Datenschutzbedingungen dieser
           Dritten. Der Dienstleister überprüft die Datenschutzbedingungen Dritter nicht.
         </Text>
@@ -49,8 +48,7 @@ const DataPrivacyPage = () => (
           1.1 Rechtsgrundlage (EU-Datenschutz-Grundverordnung)
         </Heading>
         <Text>
-          Die EU-Datenschutz-Grundverordnung schützt die Grundrechte
-          und Grundfreiheiten natürlicher
+          Die EU-Datenschutz-Grundverordnung schützt die Grundrechte und Grundfreiheiten natürlicher
           Personen und insbesondere deren Recht auf Schutz personenbezogener Daten. Personenbezogene
           Daten sind alle Informationen, die sich auf eine identifizierte oder identifizierbare
           natürliche Person beziehen.
@@ -61,19 +59,18 @@ const DataPrivacyPage = () => (
       <Container>
         <Heading className={cSubSubHeading}>1.2 Grundsätzliches</Heading>
         <Text>
-          Verantwortlich sind wir vom Botch Bowl Rollsportverein,
-          Nikolaus-Gassner- Straße 44, 5710 Kaprun. Ihr könnt uns in dieser Angelegenheit unter
+          Verantwortlich sind wir vom Botch Bowl Rollsportverein, Nikolaus-Gassner- Straße 44, 5710
+          Kaprun. Ihr könnt uns in dieser Angelegenheit unter
         </Text>
         <a className={cLink} href="mail-to:hello@botch-bowl.com">
           hello@botch-bowl.com
         </a>
         <Text>
-          erreichen.
-          Mit der Nutzung unserer Websites willigen Sie ein, dass wir bestimmte Daten erheben
-          dürfen. Im Gegenzug verpflichten wir uns Deine Daten jederzeit zu schützen. Deine Daten
-          werden von uns nicht zum Zwecke der Werbung an Dritte weitergegeben. Dritte erhalten Deine
-          personenbezogenen Daten von uns nur in der in diesen Datenschutzbestimmungen beschriebenen
-          Weise.
+          erreichen. Mit der Nutzung unserer Websites willigen Sie ein, dass wir bestimmte Daten
+          erheben dürfen. Im Gegenzug verpflichten wir uns Deine Daten jederzeit zu schützen. Deine
+          Daten werden von uns nicht zum Zwecke der Werbung an Dritte weitergegeben. Dritte erhalten
+          Deine personenbezogenen Daten von uns nur in der in diesen Datenschutzbestimmungen
+          beschriebenen Weise.
         </Text>
       </Container>
     </Section>
@@ -94,13 +91,12 @@ const DataPrivacyPage = () => (
           lit. f. DSGVO Daten über jeden Zugriff auf den Server auf dem sich dieser Dienst befindet
           (sogenannte Serverlogfiles). Dazu gehören Name der abgerufenen Webseite, Datei, Datum und
           Uhrzeit des Abrufs, übertragene Datenmenge, Meldung über erfolgreichen Abruf, Browsertyp
-          nebst Version, das Betriebssystem des Nutzers, Referrer URL (die zuvor besuchte Seite)
-          und der anfragende Provider. Logfile-Informationen werden aus
-          Sicherheitsgründen (z.B. zur Aufklärung von Missbrauchs- oder Betrugshandlungen)
-          für die
-          Dauer von maximal 30 Tagen gespeichert und danach gelöscht. Daten, deren weitere
-          Aufbewahrung zu Beweiszwecken erforderlich ist, sind bis zur endgültigen Klärung des
-          jeweiligen Vorfalls von der Löschung ausgenommen.
+          nebst Version, das Betriebssystem des Nutzers, Referrer URL (die zuvor besuchte Seite) und
+          der anfragende Provider. Logfile-Informationen werden aus Sicherheitsgründen (z.B. zur
+          Aufklärung von Missbrauchs- oder Betrugshandlungen) für die Dauer von maximal 30 Tagen
+          gespeichert und danach gelöscht. Daten, deren weitere Aufbewahrung zu Beweiszwecken
+          erforderlich ist, sind bis zur endgültigen Klärung des jeweiligen Vorfalls von der
+          Löschung ausgenommen.
         </Text>
       </Container>
     </Section>
@@ -119,13 +115,12 @@ const DataPrivacyPage = () => (
           hello@botch-bowl.com
         </a>
         <Text>
-          kontaktieren. Nachfolgend findest Du einen Überblick Ihrer
-          Rechte im Einzelnen:
+          kontaktieren. Nachfolgend findest Du einen Überblick Ihrer Rechte im Einzelnen:
           <br />
           <br />
           <strong>Auskunftsrecht: </strong>
-          Auf Anfrage erteilen wir Dir die Auskunft, welche
-          Daten von Dir bei uns gespeichert sind. Näheres finden Sie in Art 15 DSGVO.
+          Auf Anfrage erteilen wir Dir die Auskunft, welche Daten von Dir bei uns gespeichert sind.
+          Näheres finden Sie in Art 15 DSGVO.
           <br />
           <br />
           <strong>Berichtigung: </strong>
@@ -134,27 +129,23 @@ const DataPrivacyPage = () => (
           <br />
           <br />
           <strong>Löschung und Einschränkung: </strong>
-          Du hast das
-          Recht nach Art 17 DSGVO Daten unverzüglich zu löschen oder nach Art 18 DSGVO die
-          Datennutzung einzuschränken lassen.
+          Du hast das Recht nach Art 17 DSGVO Daten unverzüglich zu löschen oder nach Art 18 DSGVO
+          die Datennutzung einzuschränken lassen.
           <br />
           <br />
           <strong>Datenübertragbarkeit: </strong>
-          Bei berechtigtem Interesse
-          hast
-          Du das Recht Deine Daten nach Art 20 DSGVO zu erhalten, und die Übermittlung an Dritte zu
-          verlangen.
+          Bei berechtigtem Interesse hast Du das Recht Deine Daten nach Art 20 DSGVO zu erhalten,
+          und die Übermittlung an Dritte zu verlangen.
           <br />
           <br />
           <strong>Widerspruch/Widerruf: </strong>
-          Du kannst jederzeit nach Art 21 DSVGO der Verarbeitung
-          Deiner Daten widersprechen, insbesondere gegen die Verarbeitung der Daten zwecks
-          Direktwerbung (Newsletter). Wenn Du glaubst, dass die Verarbeitung Deiner Daten gegen das
-          Datenschutzrecht verstößt oder Deine datenschutzrechtlichen Ansprüche sonst in einer
-          Weise
-          verletzt worden sind, kannst Du dich bei der Aufsichtsbehörde beschweren (Art 77 DSGVO).
-          In Österreich ist dies die Datenschutzbehörde. Diesbezüglich verweisen wir auch auf die
-          unter dem Link https://www.dsb.gv.at/ abrufbare Homepage der Datenschutzbehörde.
+          Du kannst jederzeit nach Art 21 DSVGO der Verarbeitung Deiner Daten widersprechen,
+          insbesondere gegen die Verarbeitung der Daten zwecks Direktwerbung (Newsletter). Wenn Du
+          glaubst, dass die Verarbeitung Deiner Daten gegen das Datenschutzrecht verstößt oder Deine
+          datenschutzrechtlichen Ansprüche sonst in einer Weise verletzt worden sind, kannst Du dich
+          bei der Aufsichtsbehörde beschweren (Art 77 DSGVO). In Österreich ist dies die
+          Datenschutzbehörde. Diesbezüglich verweisen wir auch auf die unter dem Link
+          https://www.dsb.gv.at/ abrufbare Homepage der Datenschutzbehörde.
         </Text>
       </Container>
     </Section>

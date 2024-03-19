@@ -6,11 +6,11 @@ import TableLine from 'src/assets/images/table-line.svg';
 import { cTable, cTableRow, cTableLine, cButtonWrapper } from './styles.module.scss';
 
 const propTypes = {
-  withCTA: PropTypes.bool,
+  withCTA: PropTypes.bool
 };
 
 const defaultProps = {
-  withCTA: false,
+  withCTA: false
 };
 
 const MembershipPrices = ({ withCTA }) => (

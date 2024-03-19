@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
-import styles from './styles.module.scss'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
+import styles from './styles.module.scss';
 
 const Button = ({ children, type, to }) => {
   switch (type) {
@@ -10,26 +10,26 @@ const Button = ({ children, type, to }) => {
         <Link to={to} className={styles.button}>
           {children}
         </Link>
-      )
+      );
     case 'external-link':
       return (
         <Link to={to} className={styles.button}>
           {children}
         </Link>
-      )
+      );
     default:
-      return <a className={styles.button}>{children}</a>
+      return <a className={styles.button}>{children}</a>;
   }
-}
+};
 
 Button.PropTypes = {
   children: PropTypes.node.isRequired,
   to: PropTypes.string.isRequired,
-  type: PropTypes.string,
-}
+  type: PropTypes.string
+};
 
 Button.defaultProps = {
-  type: '',
-}
+  type: ''
+};
 
-export default Button
+export default Button;

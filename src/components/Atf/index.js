@@ -43,22 +43,52 @@ const Atf = () => {
           </Heading>
         </motion.div>
         <motion.div className={cImage1} style={{ x: xSpeed1, opacity }}>
-          <StaticImage className={cImg} imgClassName={cBorderRadius} src="../../assets/images/atf/meidl.jpg" alt="Fs Smith" />
+          <StaticImage
+            className={cImg}
+            imgClassName={cBorderRadius}
+            src="../../assets/images/atf/meidl.jpg"
+            alt="Fs Smith"
+          />
         </motion.div>
         <motion.div className={cImage2} style={{ x: xSpeed2, opacity }}>
-          <StaticImage className={cImg} imgClassName={cBorderRadius} src="../../assets/images/atf/botch.jpg" alt="Pfusch" />
+          <StaticImage
+            className={cImg}
+            imgClassName={cBorderRadius}
+            src="../../assets/images/atf/botch.jpg"
+            alt="Pfusch"
+          />
         </motion.div>
         <motion.div className={cImage3} style={{ x: xSpeed3, opacity }}>
-          <StaticImage className={cImg} imgClassName={cBorderRadius} src="../../assets/images/atf/mima.jpg" alt="Mischmaschin" />
+          <StaticImage
+            className={cImg}
+            imgClassName={cBorderRadius}
+            src="../../assets/images/atf/mima.jpg"
+            alt="Mischmaschin"
+          />
         </motion.div>
         <motion.div className={cImage4} style={{ x: xSpeed4, opacity }}>
-          <StaticImage className={cImg} imgClassName={cBorderRadius} src="../../assets/images/atf/feufeu.jpg" alt="Feia" />
+          <StaticImage
+            className={cImg}
+            imgClassName={cBorderRadius}
+            src="../../assets/images/atf/feufeu.jpg"
+            alt="Feia"
+          />
         </motion.div>
         <motion.div className={cImage5} style={{ x: xSpeed5, opacity }}>
-          <StaticImage className={cImg} imgClassName={cBorderRadius} src="../../assets/images/atf/bier.jpg" alt="Bier" />
+          <StaticImage
+            className={cImg}
+            imgClassName={cBorderRadius}
+            src="../../assets/images/atf/bier.jpg"
+            alt="Bier"
+          />
         </motion.div>
         <motion.div className={cImage6} style={{ x: xSpeed6, opacity }}>
-          <StaticImage className={cImg} imgClassName={cBorderRadius} src="../../assets/images/atf/fa-2.jpg" alt="Firmenauto" />
+          <StaticImage
+            className={cImg}
+            imgClassName={cBorderRadius}
+            src="../../assets/images/atf/fa-2.jpg"
+            alt="Firmenauto"
+          />
         </motion.div>
 
         <AnchorLink to="/#we-are-botch">

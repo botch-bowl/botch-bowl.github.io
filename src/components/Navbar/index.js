@@ -1,15 +1,11 @@
-import React from 'react'
-import { Container } from 'src/components/Base'
-import BrandLogo from 'src/assets/images/brand.inline.svg'
-import styles from './styles.module.scss'
+import React from 'react';
+import { Container } from 'src/components/Base';
+import BrandLogo from 'src/assets/images/brand.inline.svg';
+import styles from './styles.module.scss';
 
 const Navbar = () => {
   return (
-    <nav
-      className={styles.navbar}
-      role="naviagtion"
-      aria-label="main navigation"
-    >
+    <nav className={styles.navbar} role="naviagtion" aria-label="main navigation">
       <Container>
         <div className={styles.brand}>
           <BrandLogo />
@@ -17,7 +13,7 @@ const Navbar = () => {
         <div className={styles.menu}></div>
       </Container>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

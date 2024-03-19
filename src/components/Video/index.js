@@ -6,7 +6,7 @@ import PLayButton from 'src/assets/images/play-button.svg';
 import { cPreview, cImage, cPlayButton, ytWrapper, videoOverlay } from './styles.module.scss';
 
 const propTypes = {
-  youtubeUrl: PropTypes.string.isRequired,
+  youtubeUrl: PropTypes.string.isRequired
 };
 
 const Video = ({ youtubeUrl }) => {

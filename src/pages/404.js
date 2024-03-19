@@ -28,17 +28,30 @@ const NotFoundPage = () => {
       <Seo title="404: Not found" noindex />
       <Section>
         <Container className={cContainer}>
-          <Heading pre="404">
-            Not found
-          </Heading>
+          <Heading pre="404">Not found</Heading>
           {randNum === 0 && (
-            <StaticImage className={cImg} onClick={() => handleGeneration()} src="../assets/images/404/404-1@2x.jpg" alt="Fs Smith" />
+            <StaticImage
+              className={cImg}
+              onClick={() => handleGeneration()}
+              src="../assets/images/404/404-1@2x.jpg"
+              alt="Fs Smith"
+            />
           )}
           {randNum === 1 && (
-            <StaticImage className={cImg} onClick={() => handleGeneration()} src="../assets/images/404/404-2@2x.jpg" alt="Fs Smith" />
+            <StaticImage
+              className={cImg}
+              onClick={() => handleGeneration()}
+              src="../assets/images/404/404-2@2x.jpg"
+              alt="Fs Smith"
+            />
           )}
           {randNum === 2 && (
-            <StaticImage className={cImg} onClick={() => handleGeneration()} src="../assets/images/404/404-3@2x.jpg" alt="Fs Smith" />
+            <StaticImage
+              className={cImg}
+              onClick={() => handleGeneration()}
+              src="../assets/images/404/404-3@2x.jpg"
+              alt="Fs Smith"
+            />
           )}
           <Button onClick={() => navigate('/')} variant="brand">
             Zur Startseite
